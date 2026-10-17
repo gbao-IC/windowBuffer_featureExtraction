@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "record_words": 69,
+  "golden_cases": 14,
+  "golden_ids": [
+    "synthetic_rule_0",
+    "synthetic_rule_1",
+    "synthetic_rule_2",
+    "synthetic_rule_3",
+    "synthetic_output_0",
+    "synthetic_output_3",
+    "synthetic_output_1",
+    "synthetic_output_2",
+    "mean_input",
+    "crest_15",
+    "dataset_class_0",
+    "dataset_class_3",
+    "dataset_class_2",
+    "dataset_class_1"
+  ],
+  "corner_cases": 4,
+  "arithmetic_cases": 180,
+  "failure_suites": [
+    {
+      "name": "norm_overflow",
+      "cases": 2,
+      "error_stage": 1,
+      "recovery_case": 2
+    },
+    {
+      "name": "fc1_overflow",
+      "cases": 2,
+      "error_stage": 2,
+      "recovery_case": 2
+    },
+    {
+      "name": "fc2_positive_overflow",
+      "cases": 1,
+      "error_stage": 3,
+      "recovery_case": 1
+    },
+    {
+      "name": "fc2_negative_overflow",
+      "cases": 1,
+      "error_stage": 3,
+      "recovery_case": 1
+    }
+  ],
+  "source_hashes": {
+    "tests/vectors/ecg_golden.json": "71da82feadeba1e98bf4f2e0d4cd3fba73653ff52b75c0246ec6ee3bf167680a",
+    "tests/vectors/model_q12_20.hex": "44b77346ac8d1636c2ccd30e2dce936e993560bfb2d37d4aa4d4e6250a847f41",
+    "tools/ecg_reference.py": "e148c04516e1adbb2ef9de88a5453f7b2931d6c69a3c0ae19baaf1851e38c77c"
+  },
+  "generated_hashes": {
+    "arithmetic.mem": "2373b69d0959f85651599b7395575661416f62b15c14a73fe620d2a6900e9e54",
+    "corner.mem": "df5a8096b0e79a295b57441ef9cc675bce92c8f64156dd43edf856ac3eef5a4d",
+    "corner_model.hex": "f12f403060cecf880c972911372b16985538b7511ff2dc63328b23b02968d4be",
+    "fc1_overflow.mem": "f1d53624525e016e6daa6e06c7d5a6c0fa74bf4c2338d780ffec85896d2ad598",
+    "fc1_overflow_model.hex": "2b9333f9da491db737faeae2f52e52c2e3597b02f8b1151963b9aaeeeb108a9d",
+    "fc2_negative_overflow.mem": "707f0eae02c1f0e0eafe3d951769872ea699c1f830eb6d948fa44d89ca0cf041",
+    "fc2_negative_overflow_model.hex": "e9c2e1577e085dc911e710fe8dc7bbbf2cc2a8e67a23e3b32f26f52ae96181d6",
+    "fc2_positive_overflow.mem": "707f0eae02c1f0e0eafe3d951769872ea699c1f830eb6d948fa44d89ca0cf041",
+    "fc2_positive_overflow_model.hex": "754a1ca48fe47d9f96b13f170e25348c1ed0f47f25dd7dc5cdd87222c88db43c",
+    "golden.mem": "56aa7728864a94dcd279b04574d64489f0cdb331150c47576eddd327bfbf2ce6",
+    "norm_overflow.mem": "a16de1178dcdd69b2bb972f3f3e29d93f4903551b8bf2c06694ba43880f65c40",
+    "norm_overflow_model.hex": "44b77346ac8d1636c2ccd30e2dce936e993560bfb2d37d4aa4d4e6250a847f41"
+  }
+}

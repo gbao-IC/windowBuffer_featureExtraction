@@ -1,0 +1,757 @@
+{
+  "review_date": "2026-10-17",
+  "status": "PASS",
+  "scope": "Existing results/source hashes/log markers and VCD evidence review; no simulation rerun or RTL change",
+  "source_hashes_match": "PASS",
+  "source_sha256": {
+    "rtl/ecg/ecg_sample_interface.sv": "1e5b8a6ae189e1ddd42597cd38d7258a4ebb69fcc1a1030fa946a6ab22b38e8e",
+    "rtl/ecg/ecg_sample_pulse_adapter.sv": "870e0535fc8d5f3ccdfd168baeb5b4ba4b803a1f2a585638f739a9475a54cd1c",
+    "rtl/ecg/ecg_window_buffer.sv": "240ec5d16b21e7ffa5e906c964e34fe54478892f434641f3be95bc09c73f2bed",
+    "tb/ecg/tb_ecg_window_buffer.sv": "d634f7ea5688914b9be3988467ffb2255ca81569b48b19af3557bb4ea11d13c3",
+    "tb/ecg/tb_legacy_window_last.sv": "1db7f95fcd816a3e2cb726137c3a21572fef3aedf6a880d05d5dba525791fa69",
+    "window/window_buffer.v": "d5e3a3003aff219337afb98a30baface587f554b68c96f555f5529d34fd40468",
+    "tools/run_ecg_window_tests.py": "0ad869b65c128bf4c59f0a2d2f540254a588a3d6363711210a77757b14498c27",
+    "tools/run_ecg_sample_tests.py": "97e9e38245a3c17f4d0a007f69bab67d1989f877ba29d25032b419fffd31008a",
+    "tools/run_ecg_rtl.py": "a8910779ade61a0e84cfd196195dcd489bbfae709ddf51b1f434f04d3513935e",
+    "tb/ecg/tb_ecg_sample_interface.sv": "b1128ec24d043fd03c29e2f2bc786905087b0f41ad96ed85f6389ca6f6f05e74",
+    "adc/adc_interface.v": "1b9605ad6c5e799091407333dedfad01e2fef3afb98ce071774b796fda2a4758",
+    "tb/ecg/tb_legacy_adc_contiguous.sv": "0fce641da20838d08302c001730e8771f0ad3df4b1614d44112413cff6e9c007",
+    "rtl/ecg/ecg_q12_20_pkg.sv": "e1a6a0d04b763976ae94855a73fc0ad37a5ff65ed6aa6d0ee38f3eed692348c0",
+    "rtl/ecg/ecg_model_rom.sv": "96247d52e405a502057b5ab5b7de6ef8d0f45518a196183488d58f4107d372c2",
+    "rtl/ecg/ecg_mlp_core.sv": "a5b3c87d71875e55647b2515b73407cdcbc71d98c59a6544b6015f25b54c2b43",
+    "tb/ecg/tb_ecg_arithmetic.sv": "452dd4fddd34f8f998b3f57a050ad0ffca8b83e1f40dd4963ddb1041d438022f",
+    "tb/ecg/tb_ecg_rom.sv": "499ad7f61eaf45670e1c1132a67aa68d572f197d09868330187469e1c108dd8d",
+    "tb/ecg/tb_ecg_mlp.sv": "8d6145a3f4cde5babd8ac5275f8dba9aa6dda6313eb734e82b6ff7927b500ab0",
+    "tools/export_ecg_sv_vectors.py": "9fe5296c1744b93eff69681caaae59bf1a6a3e1092fd62e7baeb089692a4f1e2",
+    "tests/vectors/ecg_golden.json": "71da82feadeba1e98bf4f2e0d4cd3fba73653ff52b75c0246ec6ee3bf167680a",
+    "tests/vectors/model_q12_20.hex": "44b77346ac8d1636c2ccd30e2dce936e993560bfb2d37d4aa4d4e6250a847f41"
+  },
+  "summaries_and_checks": [
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "verilator_lint",
+      "status": "NOT RUN",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "questa_version",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "vlib",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "vmap_init",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "vmap_work",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "window_lint_compile",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "legacy_compile",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "legacy_last_sample",
+      "status": "FAIL",
+      "expected_baseline_failure": true
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "legacy_last_sample_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "window_elaboration",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "window347",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "window347_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "window500",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "window500_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "window1",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "window1_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "replay_window347",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "replay_window347_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "pulse_window347",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "pulse_window347_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "sample_and_mlp_regression",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "nested_regression_results",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "docs/phase3b_results.json",
+      "name": "tested_sources_unchanged",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "verilator_lint",
+      "status": "NOT RUN",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "questa_version",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "vlib",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "vmap_init",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "vmap_work",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "sample_lint_compile",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "legacy_compile",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "legacy_contiguous",
+      "status": "FAIL",
+      "expected_baseline_failure": true
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "legacy_contiguous_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "core_elaboration",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "adapter_elaboration",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "replay_ready_valid",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "replay_ready_valid_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "pulse_overflow",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "pulse_overflow_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "phase2a_mlp_regression",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/results.json",
+      "name": "sources_unchanged_during_run",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "export_vectors",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "verilator_lint",
+      "status": "NOT RUN",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "icarus_simulation",
+      "status": "NOT RUN",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "vlog_version",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "vsim_version",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "vlib",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "vmap_init",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "vmap_work",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "questa_lint_compile",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "core_elaboration",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "arithmetic",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "arithmetic_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "rom",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "rom_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "golden_protocol",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "golden_protocol_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "signed_corners",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "signed_corners_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "norm_overflow",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "norm_overflow_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "fc1_overflow",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "fc1_overflow_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "fc2_positive_overflow",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "fc2_positive_overflow_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "fc2_negative_overflow",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    },
+    {
+      "summary": "build/phase3a/20261016_224253_040119/mlp_results.json",
+      "name": "fc2_negative_overflow_vcd",
+      "status": "PASS",
+      "expected_baseline_failure": false
+    }
+  ],
+  "artifacts": {
+    "docs/phase3b_results.json": {
+      "bytes": 17173,
+      "sha256": "c8db0997c1804ab555c54a03cf9f34d840de09c9d6e45a3d85056c5aa412a700"
+    },
+    "build/phase3b/20261016_224152_083607/questa_version.log": {
+      "bytes": 54,
+      "sha256": "72377c08d8f187eaed5f63b0df2655904942b993d18bfd952773a5308b6509c2"
+    },
+    "build/phase3b/20261016_224152_083607/vlib.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/phase3b/20261016_224152_083607/vmap_init.log": {
+      "bytes": 138,
+      "sha256": "e3f83ad0b7920c354bc0b68084604868ee2b2091a0342c5be2f93037e547e4d2"
+    },
+    "build/phase3b/20261016_224152_083607/vmap_work.log": {
+      "bytes": 104,
+      "sha256": "c0a84c63e37d90b4bfb423d081be87f3249431f88fa9a675c09e565a17e122e9"
+    },
+    "build/phase3b/20261016_224152_083607/window_lint_compile.log": {
+      "bytes": 753,
+      "sha256": "6d32887a68711eaff9c8d9a6e7491b4225c1b277aa1620271cc550f7b69a7c6e"
+    },
+    "build/phase3b/20261016_224152_083607/legacy_compile.log": {
+      "bytes": 476,
+      "sha256": "917832a18b413fbb5ee38569455202110dabeb787f70ab960cf24695233608b0"
+    },
+    "build/phase3b/20261016_224152_083607/legacy_last_sample.log": {
+      "bytes": 2688,
+      "sha256": "50a056db9129452d340becf89baffb24a8184195f8150eefd6fb99b73da08bec"
+    },
+    "build/phase3b/20261016_224152_083607/legacy_last_sample.vcd": {
+      "bytes": 46474,
+      "sha256": "2bfe2ea653a94e8e03a23eb03f40dcd25f5ec40982a8cd28052529f7b452fd2e"
+    },
+    "build/phase3b/20261016_224152_083607/window_elaboration.log": {
+      "bytes": 749,
+      "sha256": "5b262b2b6e92349deae875f794336a2323a719b4a568216476b396f3be188e47"
+    },
+    "build/phase3b/20261016_224152_083607/window347.log": {
+      "bytes": 2744,
+      "sha256": "b2664573ac21c98a3982c8d8a71775ab59facb8a339d73952693f78dd07e6436"
+    },
+    "build/phase3b/20261016_224152_083607/window347.vcd": {
+      "bytes": 576664,
+      "sha256": "3841d43550353ffd390e6046bb9bd41add1903d4930b96c28b41b1425514ce35"
+    },
+    "build/phase3b/20261016_224152_083607/window500.log": {
+      "bytes": 2745,
+      "sha256": "e491bc777a2abd886891d513bab227cb93e31955a01d34978a8486ced3f757e3"
+    },
+    "build/phase3b/20261016_224152_083607/window500.vcd": {
+      "bytes": 816477,
+      "sha256": "15efdbbe18e4759ccf5e4d95515b72b20c715fd76a738b6adea07e590a2bf906"
+    },
+    "build/phase3b/20261016_224152_083607/window1.log": {
+      "bytes": 2719,
+      "sha256": "5c55ebd89ed18ebe7ac1d9fc3d2deb0de463b918aedb131c3a8866512b4a9dd8"
+    },
+    "build/phase3b/20261016_224152_083607/window1.vcd": {
+      "bytes": 19785,
+      "sha256": "432aa7e0b2572ed047870b8ebd4ef7ac91e9db71852d26c3f11e3f0c322d36fd"
+    },
+    "build/phase3b/20261016_224152_083607/replay_window347.log": {
+      "bytes": 2802,
+      "sha256": "acc955970471cf3f5ab65f373da65107441b778eac445a89d05b524dcfc4d8bb"
+    },
+    "build/phase3b/20261016_224152_083607/replay_window347.vcd": {
+      "bytes": 576984,
+      "sha256": "88a218cfc2b218bf69aa27f4ccdec09fa3ed41ac57a672674476cc11ea0a7e2b"
+    },
+    "build/phase3b/20261016_224152_083607/pulse_window347.log": {
+      "bytes": 2845,
+      "sha256": "a67bdce4242c491e2827063295915190b50696f1289f3ee490791576d80b7b4a"
+    },
+    "build/phase3b/20261016_224152_083607/pulse_window347.vcd": {
+      "bytes": 601575,
+      "sha256": "67edb48a03df58393fb14e3c1de13e9ac97324ab41a941905bddb1d805feef82"
+    },
+    "build/phase3b/20261016_224152_083607/sample_and_mlp_regression.log": {
+      "bytes": 625,
+      "sha256": "82f6bd1af07b2da2aa0b321735e5da62e83afdd3c39306e89d914ff9687a7a73"
+    },
+    "build/phase3a/20261016_224253_040119/results.json": {
+      "bytes": 12567,
+      "sha256": "1c04c8670df5fef246959d5a39736c27f058633078f5f5e28fef57da2cb7f3cc"
+    },
+    "build/phase3a/20261016_224253_040119/questa_version.log": {
+      "bytes": 54,
+      "sha256": "72377c08d8f187eaed5f63b0df2655904942b993d18bfd952773a5308b6509c2"
+    },
+    "build/phase3a/20261016_224253_040119/vlib.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/phase3a/20261016_224253_040119/vmap_init.log": {
+      "bytes": 138,
+      "sha256": "e3f83ad0b7920c354bc0b68084604868ee2b2091a0342c5be2f93037e547e4d2"
+    },
+    "build/phase3a/20261016_224253_040119/vmap_work.log": {
+      "bytes": 104,
+      "sha256": "c0a84c63e37d90b4bfb423d081be87f3249431f88fa9a675c09e565a17e122e9"
+    },
+    "build/phase3a/20261016_224253_040119/sample_lint_compile.log": {
+      "bytes": 637,
+      "sha256": "3295feb1b6cc21b05b10cd63e29433751e3379eab44fbce18e05ecd9dfdf2b6f"
+    },
+    "build/phase3a/20261016_224253_040119/legacy_compile.log": {
+      "bytes": 482,
+      "sha256": "43ea53bb597224540ab0ad234713ce7df750bcd29af9984d7029b674da476aa3"
+    },
+    "build/phase3a/20261016_224253_040119/legacy_contiguous.log": {
+      "bytes": 2687,
+      "sha256": "acf9eaf191b7f16da25ddf638c724238e5585f5665e7e7398e6b1b8b5805feaf"
+    },
+    "build/phase3a/20261016_224253_040119/legacy_contiguous.vcd": {
+      "bytes": 4614,
+      "sha256": "25830efbd4b0da2173e5761eb44b81b489b54f1fb4cf900d1997a2718e8ab791"
+    },
+    "build/phase3a/20261016_224253_040119/core_elaboration.log": {
+      "bytes": 761,
+      "sha256": "e45265b09dad509ad8be03ef8cf4317e7295c7135b44274f037f1482bdb7e1fb"
+    },
+    "build/phase3a/20261016_224253_040119/adapter_elaboration.log": {
+      "bytes": 861,
+      "sha256": "d841ea3afa3ee5b2b400b75e9180ea2637a765599dc0c3ef40b7789494e66bbc"
+    },
+    "build/phase3a/20261016_224253_040119/replay_ready_valid.log": {
+      "bytes": 2724,
+      "sha256": "3af71e2b7a64e0ac0acbdad113313aad9d3b3fa18f1f1b7577d2f4cf44912ac0"
+    },
+    "build/phase3a/20261016_224253_040119/replay_ready_valid.vcd": {
+      "bytes": 7430131,
+      "sha256": "08ad28e69ada06beb93e9d45353c6a0c1d47962ee549f9e8d6a460a461d05c3a"
+    },
+    "build/phase3a/20261016_224253_040119/pulse_overflow.log": {
+      "bytes": 2764,
+      "sha256": "a58d8ac98e97abd2a8b1babb17107d54abb63ee7b88344895c8754e725a5156d"
+    },
+    "build/phase3a/20261016_224253_040119/pulse_overflow.vcd": {
+      "bytes": 7611010,
+      "sha256": "e3815f87bf981a5e9915018161f6dc839fc6d950ba44b0246203565701ff7a8a"
+    },
+    "build/phase3a/20261016_224253_040119/phase2a_mlp_regression.log": {
+      "bytes": 701,
+      "sha256": "ee05a2de8650cd936fd0eb6478d98cf1a689f38ff834d83036225205ec049efe"
+    },
+    "build/phase3a/20261016_224253_040119/mlp_results.json": {
+      "bytes": 23077,
+      "sha256": "358d5471971acc858eb11386552d24dd7a311025d82f2fd5db5f2d053a54d6e6"
+    },
+    "build/phase2a/20261016_224321/export_vectors.log": {
+      "bytes": 106,
+      "sha256": "61119c80b435b43d941e27096018389bd4ca2187aed7765b3856d52215871ae0"
+    },
+    "build/phase2a/20261016_224321/vlog_version.log": {
+      "bytes": 54,
+      "sha256": "72377c08d8f187eaed5f63b0df2655904942b993d18bfd952773a5308b6509c2"
+    },
+    "build/phase2a/20261016_224321/vsim_version.log": {
+      "bytes": 57,
+      "sha256": "8d7f55ed093b155a73f087af5ae1e246fedb13526d72d8c93f9424672e672cd5"
+    },
+    "build/phase2a/20261016_224321/vlib.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "build/phase2a/20261016_224321/vmap_init.log": {
+      "bytes": 138,
+      "sha256": "e3f83ad0b7920c354bc0b68084604868ee2b2091a0342c5be2f93037e547e4d2"
+    },
+    "build/phase2a/20261016_224321/vmap_work.log": {
+      "bytes": 104,
+      "sha256": "c0a84c63e37d90b4bfb423d081be87f3249431f88fa9a675c09e565a17e122e9"
+    },
+    "build/phase2a/20261016_224321/questa_lint_compile.log": {
+      "bytes": 992,
+      "sha256": "833f7dcd7d30e6a219d1eedab0a0ddfdde311b21f78a8b1c5fa86023e08ef64e"
+    },
+    "build/phase2a/20261016_224321/core_elaboration.log": {
+      "bytes": 887,
+      "sha256": "465afdc97ce4c84f3adcf60698ab4c393c249e91ee0b7d310d046ebb257ef5fe"
+    },
+    "build/phase2a/20261016_224321/arithmetic.log": {
+      "bytes": 2587,
+      "sha256": "3cffa6a0a9ff35232d994f3f2a0e11781d3546c2c5ce8f8b408fd81d9d7bdc4c"
+    },
+    "build/phase2a/20261016_224321/arithmetic.vcd": {
+      "bytes": 8843,
+      "sha256": "8a2d56dd6640a95211923e4218fa00eb0fc73d4104ceca2f91cdaae9d4596a08"
+    },
+    "build/phase2a/20261016_224321/rom.log": {
+      "bytes": 2504,
+      "sha256": "123a798f1c48426a40bbab979226073d6a72ee6ac1a05cc2260b1e5dd02ab997"
+    },
+    "build/phase2a/20261016_224321/rom.vcd": {
+      "bytes": 44535,
+      "sha256": "4821de2938d2dd5399da9e5ead825ee76a06e11b706cd9ebf97b53b609b55a74"
+    },
+    "build/phase2a/20261016_224321/golden_protocol.log": {
+      "bytes": 4974,
+      "sha256": "dfb1508968d946326f4605ad40e7fc1704e4228d485dd58113f11c431aafdcec"
+    },
+    "build/phase2a/20261016_224321/golden_protocol.vcd": {
+      "bytes": 6318560,
+      "sha256": "ea854eabc07439bf8a3f1cbaf439b5798d2a3e5a215c5b7631c985c083b71837"
+    },
+    "build/phase2a/20261016_224321/signed_corners.log": {
+      "bytes": 3171,
+      "sha256": "3a9df6f9f27392f210aefbeeabddc99402388a8b61ffb99a400e54139f86b304"
+    },
+    "build/phase2a/20261016_224321/signed_corners.vcd": {
+      "bytes": 791559,
+      "sha256": "8d5140de6418adbf8f403bdebbda2848fc87c06191c10581182ba7d5caa52b41"
+    },
+    "build/phase2a/20261016_224321/norm_overflow.log": {
+      "bytes": 3176,
+      "sha256": "903db1fef5ba275ab086c72e9739cfae550e668c0483e91e6cdc32465e02a3b6"
+    },
+    "build/phase2a/20261016_224321/norm_overflow.vcd": {
+      "bytes": 262795,
+      "sha256": "2e05d4848ca19f0c5ffdfd6666ed205619a3154351a22ec1ad79b12973e21dc2"
+    },
+    "build/phase2a/20261016_224321/fc1_overflow.log": {
+      "bytes": 3171,
+      "sha256": "2eab6d5268dbe278f08668472d5129c5127ab6472bfd7cfd4c404c898c0a81ff"
+    },
+    "build/phase2a/20261016_224321/fc1_overflow.vcd": {
+      "bytes": 221066,
+      "sha256": "babefe1542ecbfd1a34055be75f4aa5b42e5f56ab75d211de2ab0bf796c39d62"
+    },
+    "build/phase2a/20261016_224321/fc2_positive_overflow.log": {
+      "bytes": 3164,
+      "sha256": "b8796d691266a701f4b49132640560f4f3a6ececed32c9f048fc9e05c3b8e016"
+    },
+    "build/phase2a/20261016_224321/fc2_positive_overflow.vcd": {
+      "bytes": 395259,
+      "sha256": "ff88820e9e2ae657b10805e2e713818aae4e659e1d9676a0252312124ccca57c"
+    },
+    "build/phase2a/20261016_224321/fc2_negative_overflow.log": {
+      "bytes": 3164,
+      "sha256": "ba763a680ebfaa8bf0d2d9d1481790d7ce1820f59a52f923f52bcb6410f4e7e1"
+    },
+    "build/phase2a/20261016_224321/fc2_negative_overflow.vcd": {
+      "bytes": 397144,
+      "sha256": "d25e58da8343c44887ad6dfbb35c9e2b8054c94bce3430d1f9fb92789981301d"
+    }
+  },
+  "waveform_checks": [
+    {
+      "file": "build/phase3b/20261016_224152_083607/legacy_last_sample.vcd",
+      "timescale": "1ps",
+      "last_timestamp": 10340000,
+      "clock_rises": 517,
+      "input_sample_edges": 512,
+      "last_input_hex": "0xa5",
+      "final_count": 511,
+      "read_address": 511,
+      "output_bits": "xxxxxxxx",
+      "status": "FAIL",
+      "expected_baseline_failure": true,
+      "evidence_consistency": "PASS"
+    },
+    {
+      "file": "build/phase3b/20261016_224152_083607/window347.vcd",
+      "timescale": "1ps",
+      "last_timestamp": 176840000,
+      "clock_rises": 8842,
+      "status": "PASS",
+      "frame_size": 347,
+      "published_frames": 9,
+      "response_handshakes": 2430,
+      "first_endpoint_checks": 7,
+      "last_endpoint_checks": 7
+    },
+    {
+      "file": "build/phase3b/20261016_224152_083607/window500.vcd",
+      "timescale": "1ps",
+      "last_timestamp": 255380000,
+      "clock_rises": 12769,
+      "status": "PASS",
+      "frame_size": 500,
+      "published_frames": 9,
+      "response_handshakes": 3501,
+      "first_endpoint_checks": 7,
+      "last_endpoint_checks": 7
+    },
+    {
+      "file": "build/phase3b/20261016_224152_083607/window1.vcd",
+      "timescale": "1ps",
+      "last_timestamp": 2900000,
+      "clock_rises": 145,
+      "status": "PASS",
+      "frame_size": 1,
+      "published_frames": 9,
+      "response_handshakes": 8,
+      "first_endpoint_checks": 7,
+      "last_endpoint_checks": 7
+    },
+    {
+      "file": "build/phase3b/20261016_224152_083607/replay_window347.vcd",
+      "timescale": "1ps",
+      "last_timestamp": 177020000,
+      "clock_rises": 8851,
+      "status": "PASS",
+      "frame_size": 347,
+      "published_frames": 9,
+      "response_handshakes": 2430,
+      "first_endpoint_checks": 7,
+      "last_endpoint_checks": 7
+    },
+    {
+      "file": "build/phase3b/20261016_224152_083607/pulse_window347.vcd",
+      "timescale": "1ps",
+      "last_timestamp": 184140000,
+      "clock_rises": 9207,
+      "status": "PASS",
+      "frame_size": 347,
+      "published_frames": 10,
+      "response_handshakes": 2430,
+      "first_endpoint_checks": 7,
+      "last_endpoint_checks": 7
+    }
+  ],
+  "artifact_hash_note": "Hashes collected at final review; original summaries provide source hashes and VCD sizes, not historical log/VCD digests.",
+  "regression_rerun": "NOT RUN",
+  "regression_rerun_reason": "All required suites already PASS and tested source hashes still match.",
+  "hardware_and_raw_preprocessing": "NOT RUN"
+}

@@ -1,0 +1,413 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "verilator_lint",
+      "status": "NOT RUN",
+      "reason": "Executable unavailable on PATH; no installation performed"
+    },
+    {
+      "name": "questa_version",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vlog.exe",
+        "-version"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/questa_version.log",
+      "warnings": [],
+      "errors": [],
+      "pass_lines": []
+    },
+    {
+      "name": "vlib",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vlib.exe",
+        "work"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/vlib.log",
+      "warnings": [],
+      "errors": [],
+      "pass_lines": []
+    },
+    {
+      "name": "vmap_init",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vmap.exe",
+        "-c"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/vmap_init.log",
+      "warnings": [],
+      "errors": [],
+      "pass_lines": []
+    },
+    {
+      "name": "vmap_work",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vmap.exe",
+        "work",
+        "work"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/vmap_work.log",
+      "warnings": [],
+      "errors": [],
+      "pass_lines": []
+    },
+    {
+      "name": "window_lint_compile",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vlog.exe",
+        "-sv",
+        "-lint",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\rtl\\ecg\\ecg_sample_interface.sv",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\rtl\\ecg\\ecg_sample_pulse_adapter.sv",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\rtl\\ecg\\ecg_window_buffer.sv",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\tb\\ecg\\tb_ecg_window_buffer.sv"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/window_lint_compile.log",
+      "warnings": [],
+      "errors": [
+        "Errors: 0, Warnings: 0"
+      ],
+      "pass_lines": []
+    },
+    {
+      "name": "legacy_compile",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vlog.exe",
+        "-sv",
+        "-lint",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\window\\window_buffer.v",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\tb\\ecg\\tb_legacy_window_last.sv"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/legacy_compile.log",
+      "warnings": [],
+      "errors": [
+        "Errors: 0, Warnings: 0"
+      ],
+      "pass_lines": []
+    },
+    {
+      "name": "legacy_last_sample",
+      "status": "FAIL",
+      "exit_code": 0,
+      "expected_baseline_failure": true,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949\\legacy_last_sample.wlf",
+        "work.tb_legacy_window_last",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3b/20261017_081254_133949/legacy_last_sample.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/legacy_last_sample.log",
+      "warnings": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "errors": [
+        "# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.",
+        "# ** Fatal: FAIL LEGACY_WINDOW_LAST expected=a5/count512 actual=xx/count511",
+        "# Errors: 1, Warnings: 1"
+      ],
+      "pass_lines": []
+    },
+    {
+      "name": "legacy_last_sample_vcd",
+      "status": "PASS",
+      "file": "build/phase3b/20261017_081254_133949/legacy_last_sample.vcd",
+      "bytes": 46474
+    },
+    {
+      "name": "window_elaboration",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vopt.exe",
+        "work.ecg_window_buffer",
+        "-o",
+        "ecg_window_elab"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/window_elaboration.log",
+      "warnings": [],
+      "errors": [
+        "Errors: 0, Warnings: 0"
+      ],
+      "pass_lines": []
+    },
+    {
+      "name": "window347",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949\\window347.wlf",
+        "-gN=347",
+        "-gLINK_MODE=0",
+        "work.tb_ecg_window_buffer",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3b/20261017_081254_133949/window347.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/window347.log",
+      "warnings": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "errors": [
+        "# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.",
+        "# Errors: 0, Warnings: 1"
+      ],
+      "pass_lines": [
+        "PASS ECG_WINDOW N=347 link=0 frames=12 released=6 writes=3989 reads=2432 replies=2430 aborted=4 loss_events=5 first=7 last=7 invalid=1 write_stalls=1062 response_stalls=1719 simultaneous_attempts=695 mismatches=0"
+      ]
+    },
+    {
+      "name": "window347_vcd",
+      "status": "PASS",
+      "file": "build/phase3b/20261017_081254_133949/window347.vcd",
+      "bytes": 576664
+    },
+    {
+      "name": "window500",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949\\window500.wlf",
+        "-gN=500",
+        "-gLINK_MODE=0",
+        "work.tb_ecg_window_buffer",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3b/20261017_081254_133949/window500.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/window500.log",
+      "warnings": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "errors": [
+        "# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.",
+        "# Errors: 0, Warnings: 1"
+      ],
+      "pass_lines": [
+        "PASS ECG_WINDOW N=500 link=0 frames=12 released=6 writes=5749 reads=3503 replies=3501 aborted=4 loss_events=5 first=7 last=7 invalid=1 write_stalls=1511 response_stalls=2551 simultaneous_attempts=1001 mismatches=0"
+      ]
+    },
+    {
+      "name": "window500_vcd",
+      "status": "PASS",
+      "file": "build/phase3b/20261017_081254_133949/window500.vcd",
+      "bytes": 816477
+    },
+    {
+      "name": "window1",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949\\window1.wlf",
+        "-gN=1",
+        "-gLINK_MODE=0",
+        "work.tb_ecg_window_buffer",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3b/20261017_081254_133949/window1.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/window1.log",
+      "warnings": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "errors": [
+        "# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.",
+        "# Errors: 0, Warnings: 1"
+      ],
+      "pass_lines": [
+        "PASS ECG_WINDOW N=1 link=0 frames=12 released=6 writes=10 reads=10 replies=8 aborted=4 loss_events=5 first=7 last=7 invalid=1 write_stalls=17 response_stalls=11 simultaneous_attempts=3 mismatches=0"
+      ]
+    },
+    {
+      "name": "window1_vcd",
+      "status": "PASS",
+      "file": "build/phase3b/20261017_081254_133949/window1.vcd",
+      "bytes": 19785
+    },
+    {
+      "name": "replay_window347",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949\\replay_window347.wlf",
+        "-gN=347",
+        "-gLINK_MODE=1",
+        "work.tb_ecg_window_buffer",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3b/20261017_081254_133949/replay_window347.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/replay_window347.log",
+      "warnings": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "errors": [
+        "# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.",
+        "# Errors: 0, Warnings: 1"
+      ],
+      "pass_lines": [
+        "PASS ECG_WINDOW N=347 link=1 frames=12 released=6 writes=3988 reads=2432 replies=2430 aborted=4 loss_events=5 first=7 last=7 invalid=1 write_stalls=0 response_stalls=1719 simultaneous_attempts=0 mismatches=0"
+      ]
+    },
+    {
+      "name": "replay_window347_vcd",
+      "status": "PASS",
+      "file": "build/phase3b/20261017_081254_133949/replay_window347.vcd",
+      "bytes": 576984
+    },
+    {
+      "name": "pulse_window347",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949\\pulse_window347.wlf",
+        "-gN=347",
+        "-gLINK_MODE=2",
+        "work.tb_ecg_window_buffer",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3b/20261017_081254_133949/pulse_window347.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949",
+      "log": "build/phase3b/20261017_081254_133949/pulse_window347.log",
+      "warnings": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "errors": [
+        "# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.",
+        "# Errors: 0, Warnings: 1"
+      ],
+      "pass_lines": [
+        "PASS ECG_WINDOW N=347 link=2 frames=13 released=6 writes=4335 reads=2432 replies=2430 aborted=5 loss_events=6 first=7 last=7 invalid=1 write_stalls=1 response_stalls=1719 simultaneous_attempts=0 mismatches=0"
+      ]
+    },
+    {
+      "name": "pulse_window347_vcd",
+      "status": "PASS",
+      "file": "build/phase3b/20261017_081254_133949/pulse_window347.vcd",
+      "bytes": 601575
+    },
+    {
+      "name": "sample_and_mlp_regression",
+      "status": "PASS",
+      "exit_code": 0,
+      "expected_baseline_failure": false,
+      "command": [
+        "C:\\Users\\giado\\ECG_Project\\.phase1a_env\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\tools\\run_ecg_sample_tests.py",
+        "--questa-dir",
+        "C:\\MentorGraphics\\win64"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction",
+      "log": "build/phase3b/20261017_081254_133949/sample_and_mlp_regression.log",
+      "warnings": [],
+      "errors": [
+        "FAIL legacy_contiguous (baseline reproduced)"
+      ],
+      "pass_lines": [
+        "PASS questa_version",
+        "PASS vlib",
+        "PASS vmap_init",
+        "PASS vmap_work",
+        "PASS sample_lint_compile",
+        "PASS legacy_compile",
+        "PASS core_elaboration",
+        "PASS adapter_elaboration",
+        "PASS replay_ready_valid",
+        "PASS pulse_overflow",
+        "PASS phase2a_mlp_regression",
+        "PASS Phase 3A: C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3a\\20261017_081333_699309"
+      ]
+    },
+    {
+      "name": "nested_regression_results",
+      "status": "PASS"
+    },
+    {
+      "name": "tested_sources_unchanged",
+      "status": "PASS"
+    }
+  ],
+  "source_sha256": {
+    "rtl/ecg/ecg_sample_interface.sv": "1e5b8a6ae189e1ddd42597cd38d7258a4ebb69fcc1a1030fa946a6ab22b38e8e",
+    "rtl/ecg/ecg_sample_pulse_adapter.sv": "870e0535fc8d5f3ccdfd168baeb5b4ba4b803a1f2a585638f739a9475a54cd1c",
+    "rtl/ecg/ecg_window_buffer.sv": "240ec5d16b21e7ffa5e906c964e34fe54478892f434641f3be95bc09c73f2bed",
+    "tb/ecg/tb_ecg_window_buffer.sv": "d634f7ea5688914b9be3988467ffb2255ca81569b48b19af3557bb4ea11d13c3",
+    "tb/ecg/tb_legacy_window_last.sv": "1db7f95fcd816a3e2cb726137c3a21572fef3aedf6a880d05d5dba525791fa69",
+    "window/window_buffer.v": "d5e3a3003aff219337afb98a30baface587f554b68c96f555f5529d34fd40468",
+    "tools/run_ecg_window_tests.py": "0ad869b65c128bf4c59f0a2d2f540254a588a3d6363711210a77757b14498c27",
+    "tools/run_ecg_sample_tests.py": "97e9e38245a3c17f4d0a007f69bab67d1989f877ba29d25032b419fffd31008a",
+    "tools/run_ecg_rtl.py": "a8910779ade61a0e84cfd196195dcd489bbfae709ddf51b1f434f04d3513935e"
+  },
+  "build_directory": "build/phase3b/20261017_081254_133949",
+  "sample_regression_results": "build/phase3a/20261017_081333_699309/results.json",
+  "hardware_timing_resources": "NOT RUN",
+  "real_ecg_preprocessing_parity": "NOT RUN"
+}

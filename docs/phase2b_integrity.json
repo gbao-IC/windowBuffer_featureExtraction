@@ -1,0 +1,205 @@
+{
+  "status": "PASS",
+  "baseline_files": 109,
+  "unchanged_file_count": 108,
+  "unchanged_files": [
+    "AI_FSM_ECG/convert_to_hex.py",
+    "AI_FSM_ECG/create_dataset.py",
+    "AI_FSM_ECG/feature_extract_column.py",
+    "AI_FSM_ECG/first_500.txt",
+    "AI_FSM_ECG/gowin_dpb.v",
+    "AI_FSM_ECG/GSR.v",
+    "AI_FSM_ECG/hr_top.v",
+    "AI_FSM_ECG/label.txt",
+    "AI_FSM_ECG/mlp_fpga_best.pth",
+    "AI_FSM_ECG/prim_sim.v",
+    "AI_FSM_ECG/README.md",
+    "AI_FSM_ECG/scaler_params_fpga.csv",
+    "AI_FSM_ECG/train_2.py",
+    "AI_FSM_ECG/weight.hex",
+    "AI_FSM_ECG/weight.mi",
+    "windowBuffer_featureExtraction/.gitignore",
+    "windowBuffer_featureExtraction/AGENTS.md",
+    "windowBuffer_featureExtraction/README.md",
+    "windowBuffer_featureExtraction/adc/adc_interface.v",
+    "windowBuffer_featureExtraction/ai/ai_classifier.v",
+    "windowBuffer_featureExtraction/ai/mlp_weights_rom.v",
+    "windowBuffer_featureExtraction/apb/apb_slave_if.v",
+    "windowBuffer_featureExtraction/control/control_fsm.v",
+    "windowBuffer_featureExtraction/docs/baseline_audit.md",
+    "windowBuffer_featureExtraction/docs/ECG_INTEGRATION_PLAN.md",
+    "windowBuffer_featureExtraction/docs/ecg_spec.md",
+    "windowBuffer_featureExtraction/docs/interface_contract.md",
+    "windowBuffer_featureExtraction/docs/model_manifest.json",
+    "windowBuffer_featureExtraction/docs/phase1a_dataset_results.json",
+    "windowBuffer_featureExtraction/docs/phase1a_integrity.json",
+    "windowBuffer_featureExtraction/docs/phase1a_report.md",
+    "windowBuffer_featureExtraction/docs/phase1a_results.json",
+    "windowBuffer_featureExtraction/docs/phase1a_tests.json",
+    "windowBuffer_featureExtraction/docs/phase1a_tests.log",
+    "windowBuffer_featureExtraction/docs/phase2a_integrity.json",
+    "windowBuffer_featureExtraction/docs/phase2a_report.md",
+    "windowBuffer_featureExtraction/feature/feature_extraction.v",
+    "windowBuffer_featureExtraction/sim/tb_top.sv",
+    "windowBuffer_featureExtraction/synthesis/run_synth.tcl",
+    "windowBuffer_featureExtraction/tb/Makefile",
+    "windowBuffer_featureExtraction/tb/run_all.bat",
+    "windowBuffer_featureExtraction/tb/run_all.sh",
+    "windowBuffer_featureExtraction/tb/run_apb.bat",
+    "windowBuffer_featureExtraction/tb/run_control.bat",
+    "windowBuffer_featureExtraction/tb/run_feature.bat",
+    "windowBuffer_featureExtraction/tb/run_simple.bat",
+    "windowBuffer_featureExtraction/tb/run_simple_feature.bat",
+    "windowBuffer_featureExtraction/tb/run_tb.bat",
+    "windowBuffer_featureExtraction/tb/run_uart.bat",
+    "windowBuffer_featureExtraction/tb/run_window.bat",
+    "windowBuffer_featureExtraction/tb/tb_adc.vvp",
+    "windowBuffer_featureExtraction/tb/tb_adc_interface.sv",
+    "windowBuffer_featureExtraction/tb/tb_adc_interface.vcd",
+    "windowBuffer_featureExtraction/tb/tb_ai_classifier.sv",
+    "windowBuffer_featureExtraction/tb/tb_apb.vvp",
+    "windowBuffer_featureExtraction/tb/tb_apb_slave_if.sv",
+    "windowBuffer_featureExtraction/tb/tb_apb_slave_if.vcd",
+    "windowBuffer_featureExtraction/tb/tb_apb_slave_if.vvp",
+    "windowBuffer_featureExtraction/tb/tb_control.vvp",
+    "windowBuffer_featureExtraction/tb/tb_control_fsm.sv",
+    "windowBuffer_featureExtraction/tb/tb_control_fsm.vcd",
+    "windowBuffer_featureExtraction/tb/tb_feature.vvp",
+    "windowBuffer_featureExtraction/tb/tb_feature_extraction.sv",
+    "windowBuffer_featureExtraction/tb/tb_feature_extraction.vcd",
+    "windowBuffer_featureExtraction/tb/tb_feature_simple.sv",
+    "windowBuffer_featureExtraction/tb/tb_feature_simple.vcd",
+    "windowBuffer_featureExtraction/tb/tb_feature_simple.vvp",
+    "windowBuffer_featureExtraction/tb/tb_top_ppg_classifier.sv",
+    "windowBuffer_featureExtraction/tb/tb_uart.vvp",
+    "windowBuffer_featureExtraction/tb/tb_uart_tx.sv",
+    "windowBuffer_featureExtraction/tb/tb_uart_tx.vcd",
+    "windowBuffer_featureExtraction/tb/tb_window.vvp",
+    "windowBuffer_featureExtraction/tb/tb_window_buffer.sv",
+    "windowBuffer_featureExtraction/tb/tb_window_buffer.vcd",
+    "windowBuffer_featureExtraction/tb/tb_window_simple.sv",
+    "windowBuffer_featureExtraction/tb/tb_window_simple.vcd",
+    "windowBuffer_featureExtraction/tb/tb_window_simple.vvp",
+    "windowBuffer_featureExtraction/tests/test_ecg_reference.py",
+    "windowBuffer_featureExtraction/tools/audit_ecg_dataset.py",
+    "windowBuffer_featureExtraction/tools/audit_ecg_model.py",
+    "windowBuffer_featureExtraction/tools/ecg_reference.py",
+    "windowBuffer_featureExtraction/tools/export_ecg_sv_vectors.py",
+    "windowBuffer_featureExtraction/tools/run_ecg_rtl.py",
+    "windowBuffer_featureExtraction/tools/run_ecg_tests.py",
+    "windowBuffer_featureExtraction/top/top_ppg_classifier.v",
+    "windowBuffer_featureExtraction/uart/uart_tx.v",
+    "windowBuffer_featureExtraction/window/window_buffer.v",
+    "windowBuffer_featureExtraction/rtl/ecg/ecg_mlp_core.sv",
+    "windowBuffer_featureExtraction/rtl/ecg/ecg_model_rom.sv",
+    "windowBuffer_featureExtraction/rtl/ecg/ecg_q12_20_pkg.sv",
+    "windowBuffer_featureExtraction/tb/ecg/tb_ecg_arithmetic.sv",
+    "windowBuffer_featureExtraction/tb/ecg/tb_ecg_mlp.sv",
+    "windowBuffer_featureExtraction/tb/ecg/tb_ecg_rom.sv",
+    "windowBuffer_featureExtraction/tests/vectors/ecg_golden.json",
+    "windowBuffer_featureExtraction/tests/vectors/model_q12_20.hex",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/arithmetic.mem",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/corner.mem",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/corner_model.hex",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/fc1_overflow.mem",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/fc1_overflow_model.hex",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/fc2_negative_overflow.mem",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/fc2_negative_overflow_model.hex",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/fc2_positive_overflow.mem",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/fc2_positive_overflow_model.hex",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/golden.mem",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/manifest.json",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/norm_overflow.mem",
+    "windowBuffer_featureExtraction/tests/vectors/phase2a/norm_overflow_model.hex"
+  ],
+  "expected_generated_index_update": [
+    {
+      "file": "windowBuffer_featureExtraction/docs/phase2a_results.json",
+      "old_sha256": "0bcdb58c68725289f29453fe5e508f5536829e6c7533e096992fe47e511ea31a",
+      "new_sha256": "3ce3d3e57a5a56a8a5103126edb313ad3ea93337651ba15ed8321a2652617e5b"
+    }
+  ],
+  "protected_source_and_golden": "PASS",
+  "git_refs": "PASS",
+  "refs_before": {
+    "AI_FSM_ECG": {
+      "branch": "main",
+      "head": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+      "main": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+      "remotes": "origin\thttps://github.com/gbao-IC/AI_FSM_ECG.git (fetch)\norigin\thttps://github.com/gbao-IC/AI_FSM_ECG.git (push)",
+      "status": ""
+    },
+    "windowBuffer_featureExtraction": {
+      "branch": "ECG",
+      "head": "983f803b3e3d815a411c46da7ae66006a9d5af03",
+      "main": "9e33a48dab0d5d517ac8adaf4000dca9f8342cda",
+      "remotes": "origin\thttps://github.com/gbao-IC/windowBuffer_featureExtraction.git (fetch)\norigin\thttps://github.com/gbao-IC/windowBuffer_featureExtraction.git (push)",
+      "status": "?? .gitignore\n?? docs/baseline_audit.md\n?? docs/ecg_spec.md\n?? docs/interface_contract.md\n?? docs/model_manifest.json\n?? docs/phase1a_dataset_results.json\n?? docs/phase1a_integrity.json\n?? docs/phase1a_report.md\n?? docs/phase1a_results.json\n?? docs/phase1a_tests.json\n?? docs/phase1a_tests.log\n?? docs/phase2a_integrity.json\n?? docs/phase2a_report.md\n?? docs/phase2a_results.json\n?? rtl/ecg/ecg_mlp_core.sv\n?? rtl/ecg/ecg_model_rom.sv\n?? rtl/ecg/ecg_q12_20_pkg.sv\n?? tb/ecg/tb_ecg_arithmetic.sv\n?? tb/ecg/tb_ecg_mlp.sv\n?? tb/ecg/tb_ecg_rom.sv\n?? tests/test_ecg_reference.py\n?? tests/vectors/ecg_golden.json\n?? tests/vectors/model_q12_20.hex\n?? tests/vectors/phase2a/arithmetic.mem\n?? tests/vectors/phase2a/corner.mem\n?? tests/vectors/phase2a/corner_model.hex\n?? tests/vectors/phase2a/fc1_overflow.mem\n?? tests/vectors/phase2a/fc1_overflow_model.hex\n?? tests/vectors/phase2a/fc2_negative_overflow.mem\n?? tests/vectors/phase2a/fc2_negative_overflow_model.hex\n?? tests/vectors/phase2a/fc2_positive_overflow.mem\n?? tests/vectors/phase2a/fc2_positive_overflow_model.hex\n?? tests/vectors/phase2a/golden.mem\n?? tests/vectors/phase2a/manifest.json\n?? tests/vectors/phase2a/norm_overflow.mem\n?? tests/vectors/phase2a/norm_overflow_model.hex\n?? tools/audit_ecg_dataset.py\n?? tools/audit_ecg_model.py\n?? tools/ecg_reference.py\n?? tools/export_ecg_sv_vectors.py\n?? tools/run_ecg_rtl.py\n?? tools/run_ecg_tests.py"
+    }
+  },
+  "refs_after": {
+    "AI_FSM_ECG": {
+      "branch": "main",
+      "head": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+      "main": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+      "remotes": "origin\thttps://github.com/gbao-IC/AI_FSM_ECG.git (fetch)\norigin\thttps://github.com/gbao-IC/AI_FSM_ECG.git (push)",
+      "status": ""
+    },
+    "windowBuffer_featureExtraction": {
+      "branch": "ECG",
+      "head": "983f803b3e3d815a411c46da7ae66006a9d5af03",
+      "main": "9e33a48dab0d5d517ac8adaf4000dca9f8342cda",
+      "remotes": "origin\thttps://github.com/gbao-IC/windowBuffer_featureExtraction.git (fetch)\norigin\thttps://github.com/gbao-IC/windowBuffer_featureExtraction.git (push)",
+      "status": "?? .gitignore\n?? docs/baseline_audit.md\n?? docs/ecg_spec.md\n?? docs/interface_contract.md\n?? docs/model_manifest.json\n?? docs/phase1a_dataset_results.json\n?? docs/phase1a_integrity.json\n?? docs/phase1a_report.md\n?? docs/phase1a_results.json\n?? docs/phase1a_tests.json\n?? docs/phase1a_tests.log\n?? docs/phase2a_integrity.json\n?? docs/phase2a_report.md\n?? docs/phase2a_results.json\n?? docs/phase2b_regression.json\n?? docs/phase2b_report.md\n?? docs/phase2b_results.json\n?? docs/phase2b_script_tests.json\n?? rtl/ecg/ecg_mlp_core.sv\n?? rtl/ecg/ecg_model_rom.sv\n?? rtl/ecg/ecg_q12_20_pkg.sv\n?? synthesis/ecg/ecg_mlp_ooc.xdc\n?? synthesis/ecg/run_vivado.tcl\n?? tb/ecg/tb_ecg_arithmetic.sv\n?? tb/ecg/tb_ecg_mlp.sv\n?? tb/ecg/tb_ecg_rom.sv\n?? tests/test_ecg_reference.py\n?? tests/test_ecg_synthesis_flow.py\n?? tests/vectors/ecg_golden.json\n?? tests/vectors/model_q12_20.hex\n?? tests/vectors/phase2a/arithmetic.mem\n?? tests/vectors/phase2a/corner.mem\n?? tests/vectors/phase2a/corner_model.hex\n?? tests/vectors/phase2a/fc1_overflow.mem\n?? tests/vectors/phase2a/fc1_overflow_model.hex\n?? tests/vectors/phase2a/fc2_negative_overflow.mem\n?? tests/vectors/phase2a/fc2_negative_overflow_model.hex\n?? tests/vectors/phase2a/fc2_positive_overflow.mem\n?? tests/vectors/phase2a/fc2_positive_overflow_model.hex\n?? tests/vectors/phase2a/golden.mem\n?? tests/vectors/phase2a/manifest.json\n?? tests/vectors/phase2a/norm_overflow.mem\n?? tests/vectors/phase2a/norm_overflow_model.hex\n?? tools/audit_ecg_dataset.py\n?? tools/audit_ecg_model.py\n?? tools/ecg_reference.py\n?? tools/export_ecg_sv_vectors.py\n?? tools/run_ecg_rtl.py\n?? tools/run_ecg_synthesis.py\n?? tools/run_ecg_tests.py"
+    }
+  },
+  "old_regression_vcd_retained": [
+    {
+      "file": "build/phase2a/20261016_164656/arithmetic.vcd",
+      "bytes": 8843
+    },
+    {
+      "file": "build/phase2a/20261016_164656/fc1_overflow.vcd",
+      "bytes": 221066
+    },
+    {
+      "file": "build/phase2a/20261016_164656/fc2_negative_overflow.vcd",
+      "bytes": 397144
+    },
+    {
+      "file": "build/phase2a/20261016_164656/fc2_positive_overflow.vcd",
+      "bytes": 395259
+    },
+    {
+      "file": "build/phase2a/20261016_164656/golden_protocol.vcd",
+      "bytes": 6318560
+    },
+    {
+      "file": "build/phase2a/20261016_164656/norm_overflow.vcd",
+      "bytes": 262795
+    },
+    {
+      "file": "build/phase2a/20261016_164656/rom.vcd",
+      "bytes": 44535
+    },
+    {
+      "file": "build/phase2a/20261016_164656/signed_corners.vcd",
+      "bytes": 791559
+    }
+  ],
+  "new_files_sha256": {
+    "docs/phase2b_regression.json": "3ce3d3e57a5a56a8a5103126edb313ad3ea93337651ba15ed8321a2652617e5b",
+    "docs/phase2b_report.md": "e09547e93379d7c08e7cf794dd7d03ac67956fbb64e8b80ea74e63cc6ab7e6f2",
+    "docs/phase2b_results.json": "83c747e2bd0e218d66346d883ea4281af600935e21e04e6d4e9e407908371cbb",
+    "docs/phase2b_script_tests.json": "0de4c0bd9f2cda72d5dc39477aef67fb0c2b0f0e5a4b857180d69aa6ead3c218",
+    "tests/test_ecg_synthesis_flow.py": "7117402a6e5def7c9a5d99028958cd7979486a97fabc18245c6588efca5789d7",
+    "tools/run_ecg_synthesis.py": "24589b5b9b69632964a82b4b96e4b1b40566ccae970787c2f8b8b5df0f11c3b2",
+    "synthesis/ecg/ecg_mlp_ooc.xdc": "57cb2d080b19672d0f320c35fb55674555701619cc82ba13663643b181ed9f9b",
+    "synthesis/ecg/run_vivado.tcl": "8fbc760977db978810da25e4190218116923c858132be25d66d24615085e835e"
+  },
+  "report_local_links": {
+    "status": "PASS",
+    "missing": []
+  },
+  "notes": "Only prior Phase2A rerun refreshed its result index. No tracked source edits; all new Phase2B output stays in RTL repo. Build logs retained; no installs, commit, push, merge or deletion."
+}

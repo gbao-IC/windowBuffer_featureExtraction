@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "tcl": "8.6.15",
+  "tests": [
+    {
+      "test": "test_corrupt_model_hash_rejected (test_ecg_synthesis_flow.PackagingTests.test_corrupt_model_hash_rejected)",
+      "status": "PASS",
+      "actual": "test_corrupt_model_hash_rejected (test_ecg_synthesis_flow.PackagingTests.test_corrupt_model_hash_rejected) ... ok"
+    },
+    {
+      "test": "test_explicit_missing_vivado_does_not_fall_back (test_ecg_synthesis_flow.PackagingTests.test_explicit_missing_vivado_does_not_fall_back)",
+      "status": "PASS",
+      "actual": "test_explicit_missing_vivado_does_not_fall_back (test_ecg_synthesis_flow.PackagingTests.test_explicit_missing_vivado_does_not_fall_back) ... ok"
+    },
+    {
+      "test": "test_full_summary_preserves_negative_slack_and_endpoint_counts (test_ecg_synthesis_flow.PackagingTests.test_full_summary_preserves_negative_slack_and_endpoint_counts)",
+      "status": "PASS",
+      "actual": "test_full_summary_preserves_negative_slack_and_endpoint_counts (test_ecg_synthesis_flow.PackagingTests.test_full_summary_preserves_negative_slack_and_endpoint_counts) ... ok"
+    },
+    {
+      "test": "test_missing_timing_is_not_zero_slack (test_ecg_synthesis_flow.PackagingTests.test_missing_timing_is_not_zero_slack)",
+      "status": "PASS",
+      "actual": "test_missing_timing_is_not_zero_slack (test_ecg_synthesis_flow.PackagingTests.test_missing_timing_is_not_zero_slack) ... ok"
+    },
+    {
+      "test": "test_reviewed_model (test_ecg_synthesis_flow.PackagingTests.test_reviewed_model)",
+      "status": "PASS",
+      "actual": "test_reviewed_model (test_ecg_synthesis_flow.PackagingTests.test_reviewed_model) ... ok"
+    },
+    {
+      "test": "test_truncated_model_rejected (test_ecg_synthesis_flow.PackagingTests.test_truncated_model_rejected)",
+      "status": "PASS",
+      "actual": "test_truncated_model_rejected (test_ecg_synthesis_flow.PackagingTests.test_truncated_model_rejected) ... ok"
+    },
+    {
+      "test": "test_wrong_word_width_rejected (test_ecg_synthesis_flow.PackagingTests.test_wrong_word_width_rejected)",
+      "status": "PASS",
+      "actual": "test_wrong_word_width_rejected (test_ecg_synthesis_flow.PackagingTests.test_wrong_word_width_rejected) ... ok"
+    },
+    {
+      "test": "test_tcl_and_xdc_structurally_complete (test_ecg_synthesis_flow.TclTests.test_tcl_and_xdc_structurally_complete)",
+      "status": "PASS",
+      "actual": "test_tcl_and_xdc_structurally_complete (test_ecg_synthesis_flow.TclTests.test_tcl_and_xdc_structurally_complete) ... ok"
+    },
+    {
+      "test": "test_tcl_refuses_existing_output (test_ecg_synthesis_flow.TclTests.test_tcl_refuses_existing_output)",
+      "status": "PASS",
+      "actual": "test_tcl_refuses_existing_output (test_ecg_synthesis_flow.TclTests.test_tcl_refuses_existing_output) ... ok"
+    },
+    {
+      "test": "test_tcl_rejects_invalid_mode_before_tool_commands (test_ecg_synthesis_flow.TclTests.test_tcl_rejects_invalid_mode_before_tool_commands)",
+      "status": "PASS",
+      "actual": "test_tcl_rejects_invalid_mode_before_tool_commands (test_ecg_synthesis_flow.TclTests.test_tcl_rejects_invalid_mode_before_tool_commands) ... ok"
+    },
+    {
+      "test": "test_xdc_applies_clock_and_both_io_bounds_without_exceptions (test_ecg_synthesis_flow.TclTests.test_xdc_applies_clock_and_both_io_bounds_without_exceptions)",
+      "status": "PASS",
+      "actual": "test_xdc_applies_clock_and_both_io_bounds_without_exceptions (test_ecg_synthesis_flow.TclTests.test_xdc_applies_clock_and_both_io_bounds_without_exceptions) ... ok"
+    }
+  ],
+  "log": "build/phase2b/script_tests_1.log",
+  "scope": "Packaging, parser and Tcl structural/constraint command capture; NOT Vivado API validation",
+  "vivado_api_validation": "NOT RUN"
+}

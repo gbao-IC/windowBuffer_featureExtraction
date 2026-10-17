@@ -1,0 +1,173 @@
+{
+  "command": "python -B tools/run_ecg_tests.py",
+  "discovered": 37,
+  "failed": 0,
+  "not_run": 0,
+  "passed": 37,
+  "python": "3.12.10",
+  "source_hashes": {
+    "tests/test_ecg_reference.py": "f7dad68a60576464f8c1b0ea035e5a2b743ad442ff8f9b6c0dad832d6acc881f",
+    "tools/audit_ecg_dataset.py": "a1c0799831f5bbd0b7ba53033bafaef65d61f63ffce5748694f12b3ee9e1664b",
+    "tools/audit_ecg_model.py": "a9f9bd7365531fb9a2dd8a5f11dc0a2acaa467701ee92d0f4c33b31ef3e63f17",
+    "tools/ecg_reference.py": "e148c04516e1adbb2ef9de88a5453f7b2931d6c69a3c0ae19baaf1851e38c77c",
+    "tools/run_ecg_tests.py": "6df6a41dcb633a81bc84e1b9eb8a2d3e0a123349ef11a6b09a1308826db76781"
+  },
+  "status": "PASS",
+  "tests": [
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.ArithmeticTests.test_accumulator_width_guard"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.ArithmeticTests.test_argmax_ties_and_all_negative"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.ArithmeticTests.test_feature_count_and_scaler_validation"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.ArithmeticTests.test_hand_calculated_mlp_including_relu_signed_argmax"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.ArithmeticTests.test_layer_overflow_is_not_saturation"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.ArithmeticTests.test_legacy_truncation_and_clipping"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.ArithmeticTests.test_nearest_even_positive_and_negative_ties"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.ArithmeticTests.test_nonfinite_and_invalid_divisor_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.ArithmeticTests.test_normalizer_overflow_is_not_saturation"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.ArithmeticTests.test_q12_20_endpoints_and_overflow"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.ArithmeticTests.test_rounding_matches_exact_fraction_randomly"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.FeatureTests.test_all_twelve_hand_computed_features"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.FeatureTests.test_crest_fifteen_and_unbounded_half_ratio"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.FeatureTests.test_first_last_sample_and_negative_peak"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.FeatureTests.test_four_label_rules_and_thresholds"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.FeatureTests.test_fourier_resampling_known_dc_sine_and_discarded_frequency"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.FeatureTests.test_invalid_rr_and_empty_window"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.FeatureTests.test_labels_against_extracted_training_function"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.FeatureTests.test_odd_half_window_denominators"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.FeatureTests.test_zero_signal_and_rr_in_seconds"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.OptionalRuntimeTests.test_numpy_original_feature_function_float64_parity"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.OptionalRuntimeTests.test_pytorch_checkpoint_and_forward_parity"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.OptionalRuntimeTests.test_scipy_resampler_float64_and_float32_parity"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_500_vectors_fixed_intermediates_against_fraction_oracle"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_all_164_legacy_words_and_mi_serialization"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_checkpoint_matches_independent_raw_storage_decode"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_confirmed_clipping_at_address_15_only"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_dataset_reordered_features_are_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_feature_order_and_source_architecture"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_full_dataset_counter_and_examples_with_independent_fixture"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_full_dataset_missing_is_not_500_distribution"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_generated_traces_match_fraction_oracle_bit_exact"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_generated_vectors_float_error_budgets_and_classes"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_proposed_rom_matches_rational_encoding"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_real_golden_rows_retain_csv_features_labels_and_patient_id"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_restricted_checkpoint_rejects_arbitrary_globals"
+    },
+    {
+      "status": "PASS",
+      "test": "test_ecg_reference.PackageTests.test_saved_windows_and_features_recompute"
+    }
+  ],
+  "versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "torch": "2.14.1+cpu"
+  }
+}

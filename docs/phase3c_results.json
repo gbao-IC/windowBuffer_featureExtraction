@@ -1,0 +1,288 @@
+{
+  "status": "FAIL",
+  "checks": [
+    {
+      "name": "python_reference_tests",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\giado\\ECG_Project\\.phase1a_env\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_ecg_feature_reference.py",
+        "-v"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction",
+      "log": "build/phase3c/20261017_080946_344260/python_reference_tests.log",
+      "errors": [],
+      "warnings": [],
+      "pass_lines": []
+    },
+    {
+      "name": "golden_generation",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\giado\\ECG_Project\\.phase1a_env\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\tools\\ecg_feature_reference.py",
+        "--output",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260\\vectors"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260",
+      "log": "build/phase3c/20261017_080946_344260/golden_generation.log",
+      "errors": [],
+      "warnings": [],
+      "pass_lines": [
+        "PASS feature_reference cases=28 decimal_parity=bit_exact math_cases=149"
+      ]
+    },
+    {
+      "name": "questa_version",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vlog.exe",
+        "-version"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260",
+      "log": "build/phase3c/20261017_080946_344260/questa_version.log",
+      "errors": [],
+      "warnings": [],
+      "pass_lines": []
+    },
+    {
+      "name": "vlib",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vlib.exe",
+        "work"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260",
+      "log": "build/phase3c/20261017_080946_344260/vlib.log",
+      "errors": [],
+      "warnings": [],
+      "pass_lines": []
+    },
+    {
+      "name": "vmap_init",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vmap.exe",
+        "-c"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260",
+      "log": "build/phase3c/20261017_080946_344260/vmap_init.log",
+      "errors": [],
+      "warnings": [],
+      "pass_lines": []
+    },
+    {
+      "name": "vmap_work",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vmap.exe",
+        "work",
+        "work"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260",
+      "log": "build/phase3c/20261017_080946_344260/vmap_work.log",
+      "errors": [],
+      "warnings": [],
+      "pass_lines": []
+    },
+    {
+      "name": "feature_lint_compile",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vlog.exe",
+        "-sv",
+        "-lint",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\rtl\\ecg\\ecg_window_buffer.sv",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\rtl\\ecg\\ecg_feature_math.sv",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\rtl\\ecg\\ecg_feature_core.sv",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\tb\\ecg\\tb_ecg_feature_math.sv",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\tb\\ecg\\tb_ecg_feature_core.sv"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260",
+      "log": "build/phase3c/20261017_080946_344260/feature_lint_compile.log",
+      "errors": [],
+      "warnings": [],
+      "pass_lines": []
+    },
+    {
+      "name": "feature_elaboration",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vopt.exe",
+        "work.ecg_feature_core",
+        "-o",
+        "feature_elab"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260",
+      "log": "build/phase3c/20261017_080946_344260/feature_elaboration.log",
+      "errors": [],
+      "warnings": [],
+      "pass_lines": []
+    },
+    {
+      "name": "arithmetic",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260\\arithmetic.wlf",
+        "+VECTORS=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3c/20261017_080946_344260/vectors/math.mem",
+        "+CASES=149",
+        "work.tb_ecg_feature_math",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3c/20261017_080946_344260/arithmetic.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260",
+      "log": "build/phase3c/20261017_080946_344260/arithmetic.log",
+      "errors": [],
+      "warnings": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "pass_lines": [
+        "PASS FEATURE_MATH cases=149 divide192 sqrt96 abort reset recovery"
+      ]
+    },
+    {
+      "name": "arithmetic_vcd",
+      "status": "PASS",
+      "file": "build/phase3c/20261017_080946_344260/arithmetic.vcd",
+      "bytes": 806857
+    },
+    {
+      "name": "features_direct",
+      "status": "FAIL",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260\\features_direct.wlf",
+        "-gSTALLED=0",
+        "+VECTORS=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3c/20261017_080946_344260/vectors",
+        "+CASES=28",
+        "work.tb_ecg_feature_core",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3c/20261017_080946_344260/features_direct.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260",
+      "log": "build/phase3c/20261017_080946_344260/features_direct.log",
+      "errors": [
+        "# ** Fatal: FAIL unexpected error 3"
+      ],
+      "warnings": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "pass_lines": [
+        "PASS FEATURES case=0 all12 bit_exact stalled=0",
+        "PASS FEATURES case=1 all12 bit_exact stalled=0",
+        "PASS FEATURES case=2 all12 bit_exact stalled=0"
+      ]
+    },
+    {
+      "name": "features_direct_vcd",
+      "status": "PASS",
+      "file": "build/phase3c/20261017_080946_344260/features_direct.vcd",
+      "bytes": 622741
+    },
+    {
+      "name": "features_stalled",
+      "status": "FAIL",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260\\features_stalled.wlf",
+        "-gSTALLED=1",
+        "+VECTORS=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3c/20261017_080946_344260/vectors",
+        "+CASES=28",
+        "work.tb_ecg_feature_core",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3c/20261017_080946_344260/features_stalled.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_080946_344260",
+      "log": "build/phase3c/20261017_080946_344260/features_stalled.log",
+      "errors": [
+        "# ** Fatal: FAIL unexpected error 3"
+      ],
+      "warnings": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "pass_lines": [
+        "PASS FEATURES case=0 all12 bit_exact stalled=1",
+        "PASS FEATURES case=1 all12 bit_exact stalled=1",
+        "PASS FEATURES case=2 all12 bit_exact stalled=1"
+      ]
+    },
+    {
+      "name": "features_stalled_vcd",
+      "status": "PASS",
+      "file": "build/phase3c/20261017_080946_344260/features_stalled.vcd",
+      "bytes": 672797
+    },
+    {
+      "name": "verilator_lint",
+      "status": "NOT RUN",
+      "reason": "Executable not found on PATH; no installation"
+    },
+    {
+      "name": "prior_regressions",
+      "status": "NOT RUN",
+      "reason": "Explicit --prior-regression after new tests pass; previous source files unchanged"
+    },
+    {
+      "name": "sources_unchanged_during_run",
+      "status": "PASS"
+    }
+  ],
+  "source_sha256": {
+    "rtl/ecg/ecg_window_buffer.sv": "240ec5d16b21e7ffa5e906c964e34fe54478892f434641f3be95bc09c73f2bed",
+    "rtl/ecg/ecg_feature_math.sv": "074643c5b5f2afe04ceb1333ca7cfcb638d27e62f8a32b0ae8eb40852a3fc2a3",
+    "rtl/ecg/ecg_feature_core.sv": "906223db40f31a720a0a50765fa61cc71cdd33153737738f56ade4c7a4f97708",
+    "tb/ecg/tb_ecg_feature_math.sv": "2c849a68efb4725340977724a89bb12144c7c6bc7b7766016cbac0ba13c195f9",
+    "tb/ecg/tb_ecg_feature_core.sv": "76ef1f5d9cc3ba447b21a268335bb92a2523fff27a71fc714e99b0cfca07b908",
+    "tools/run_ecg_feature_tests.py": "7e4f0c438a2a98f533dcc708e689361d2ffad8536edf1c5fbb0cee87c0e24f66",
+    "tools/ecg_feature_reference.py": "b72ffaf6224143c056ef85601fdd5596bff53e7f498d001c567ea1f67582a1b7",
+    "tests/test_ecg_feature_reference.py": "26cda1c9beb8613a45ebbf2d268bb65d8a2a9b52f1bd0102c4acfb1fc0d3f60f",
+    "tools/ecg_reference.py": "e148c04516e1adbb2ef9de88a5453f7b2931d6c69a3c0ae19baaf1851e38c77c",
+    "docs/phase3c_numeric_contract.md": "9ee32be510c73035a0c36d98b63e604e3cbd76ed1ff6e425a90a0855210316a9"
+  },
+  "vector_sha256": {
+    "build/phase3c/20261017_080946_344260/vectors/expected.mem": "ebd8c607e9a2dfdb2d0983c89694723ef0835958c59681209d152668a9774f58",
+    "build/phase3c/20261017_080946_344260/vectors/features.json": "0fc4ce75a0fa6bfd3137b81a08408467bc35ae8f3331a64c7b6a169847ad27c1",
+    "build/phase3c/20261017_080946_344260/vectors/math.mem": "70d8d5b0470bf02a2d3e4a2f5590cb6d4e526e26ee79a71648d71a12d1f3c673",
+    "build/phase3c/20261017_080946_344260/vectors/rr.mem": "0494085b6aa1080e28e9ed5fb798999d6804c8f5711cd025e1394a4da61f5fb5",
+    "build/phase3c/20261017_080946_344260/vectors/samples.mem": "e351620fd65a94c2155760f0f1ec4da738839db624aa597140de0352c58bd731"
+  },
+  "build_directory": "build/phase3c/20261017_080946_344260",
+  "prior_regression": null,
+  "training_preprocessing_parity": "NOT RUN",
+  "hardware_synthesis_timing": "NOT RUN"
+}

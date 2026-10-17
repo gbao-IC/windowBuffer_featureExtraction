@@ -1,0 +1,519 @@
+{
+  "status": "PASS",
+  "build_directory": "build/phase2a/20261016_170307",
+  "checks": [
+    {
+      "name": "export_vectors",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\giado\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+        "-B",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\tools\\export_ecg_sv_vectors.py"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction",
+      "log": "build/phase2a/20261016_170307/export_vectors.log",
+      "warning_lines": [],
+      "error_lines": [],
+      "pass_lines": []
+    },
+    {
+      "name": "verilator_lint",
+      "status": "NOT RUN",
+      "reason": "verilator not found on PATH or audited tool directories"
+    },
+    {
+      "name": "icarus_simulation",
+      "status": "NOT RUN",
+      "reason": "iverilog/vvp not found; Questa selected"
+    },
+    {
+      "name": "vlog_version",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vlog.exe",
+        "-version"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/vlog_version.log",
+      "warning_lines": [],
+      "error_lines": [],
+      "pass_lines": []
+    },
+    {
+      "name": "vsim_version",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-version"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/vsim_version.log",
+      "warning_lines": [],
+      "error_lines": [],
+      "pass_lines": []
+    },
+    {
+      "name": "vlib",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vlib.exe",
+        "work"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/vlib.log",
+      "warning_lines": [],
+      "error_lines": [],
+      "pass_lines": []
+    },
+    {
+      "name": "vmap_init",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vmap.exe",
+        "-c"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/vmap_init.log",
+      "warning_lines": [],
+      "error_lines": [],
+      "pass_lines": []
+    },
+    {
+      "name": "vmap_work",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vmap.exe",
+        "work",
+        "work"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/vmap_work.log",
+      "warning_lines": [],
+      "error_lines": [],
+      "pass_lines": []
+    },
+    {
+      "name": "questa_lint_compile",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vlog.exe",
+        "-sv",
+        "-lint",
+        "-work",
+        "work",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\rtl\\ecg\\ecg_q12_20_pkg.sv",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\rtl\\ecg\\ecg_model_rom.sv",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\rtl\\ecg\\ecg_mlp_core.sv",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\tb\\ecg\\tb_ecg_arithmetic.sv",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\tb\\ecg\\tb_ecg_rom.sv",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\tb\\ecg\\tb_ecg_mlp.sv"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/questa_lint_compile.log",
+      "warning_lines": [],
+      "error_lines": [],
+      "pass_lines": []
+    },
+    {
+      "name": "core_elaboration",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vopt.exe",
+        "-work",
+        "work",
+        "work.ecg_mlp_core",
+        "-o",
+        "ecg_core_elab"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/core_elaboration.log",
+      "warning_lines": [],
+      "error_lines": [],
+      "pass_lines": []
+    },
+    {
+      "name": "arithmetic",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307\\arithmetic.wlf",
+        "work.tb_ecg_arithmetic",
+        "+VECTORS=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/phase2a/arithmetic.mem",
+        "+CASES=180",
+        "+ERROR_STAGE=0",
+        "+PROTOCOL=0",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase2a/20261016_170307/arithmetic.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/arithmetic.log",
+      "warning_lines": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "error_lines": [],
+      "pass_lines": [
+        "PASS arithmetic cases=180 signed_rounding_and_range"
+      ]
+    },
+    {
+      "name": "arithmetic_vcd",
+      "status": "PASS",
+      "file": "build/phase2a/20261016_170307/arithmetic.vcd",
+      "bytes": 8843
+    },
+    {
+      "name": "rom",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307\\rom.wlf",
+        "-gMODEL_FILE=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/model_q12_20.hex",
+        "work.tb_ecg_rom",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase2a/20261016_170307/rom.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/rom.log",
+      "warning_lines": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "error_lines": [],
+      "pass_lines": [
+        "PASS ROM 164_addresses_each_port latency=1 invalid_addresses independent_enables reset"
+      ]
+    },
+    {
+      "name": "rom_vcd",
+      "status": "PASS",
+      "file": "build/phase2a/20261016_170307/rom.vcd",
+      "bytes": 44535
+    },
+    {
+      "name": "golden_protocol",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307\\golden_protocol.wlf",
+        "-gMODEL_FILE=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/model_q12_20.hex",
+        "work.tb_ecg_mlp",
+        "+VECTORS=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/phase2a/golden.mem",
+        "+CASES=14",
+        "+ERROR_STAGE=0",
+        "+PROTOCOL=1",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase2a/20261016_170307/golden_protocol.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/golden_protocol.log",
+      "warning_lines": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "error_lines": [],
+      "pass_lines": [
+        "PASS inference case=0 class=3 error_stage=0 cycles=461",
+        "PASS inference case=1 class=1 error_stage=0 cycles=461",
+        "PASS inference case=2 class=2 error_stage=0 cycles=461",
+        "PASS inference case=3 class=3 error_stage=0 cycles=461",
+        "PASS inference case=4 class=0 error_stage=0 cycles=461",
+        "PASS inference case=5 class=3 error_stage=0 cycles=461",
+        "PASS inference case=6 class=1 error_stage=0 cycles=461",
+        "PASS inference case=7 class=2 error_stage=0 cycles=461",
+        "PASS inference case=8 class=3 error_stage=0 cycles=461",
+        "PASS inference case=9 class=3 error_stage=0 cycles=461",
+        "PASS inference case=10 class=0 error_stage=0 cycles=461",
+        "PASS inference case=11 class=0 error_stage=0 cycles=461",
+        "PASS inference case=12 class=2 error_stage=0 cycles=461",
+        "PASS inference case=13 class=1 error_stage=0 cycles=461",
+        "PASS inference case=0 class=3 error_stage=0 cycles=461",
+        "PASS inference case=13 class=1 error_stage=0 cycles=461",
+        "PASS inference case=0 class=3 error_stage=0 cycles=461",
+        "PASS inference case=1 class=1 error_stage=0 cycles=461",
+        "PASS reset_abort_and_recovery state=1",
+        "PASS inference case=2 class=2 error_stage=0 cycles=461",
+        "PASS reset_abort_and_recovery state=2",
+        "PASS inference case=3 class=3 error_stage=0 cycles=461",
+        "PASS reset_abort_and_recovery state=3",
+        "PASS inference case=4 class=0 error_stage=0 cycles=461",
+        "PASS reset_abort_and_recovery state=4",
+        "PASS inference case=5 class=3 error_stage=0 cycles=461",
+        "PASS reset_abort_and_recovery state=5",
+        "PASS inference case=6 class=1 error_stage=0 cycles=461",
+        "PASS reset_abort_and_recovery state=6",
+        "PASS inference case=7 class=2 error_stage=0 cycles=461",
+        "PASS reset_abort_and_recovery state=7",
+        "PASS inference case=8 class=3 error_stage=0 cycles=461",
+        "PASS reset_abort_and_recovery state=8",
+        "PASS inference case=9 class=3 error_stage=0 cycles=461",
+        "PASS reset_abort_and_recovery state=9",
+        "PASS inference case=10 class=0 error_stage=0 cycles=461",
+        "PASS reset_abort_and_recovery state=10",
+        "PASS inference case=11 class=0 error_stage=0 cycles=461",
+        "PASS reset_abort_and_recovery state=11",
+        "PASS inference case=12 class=2 error_stage=0 cycles=461",
+        "PASS reset_abort_and_recovery state=12",
+        "PASS MLP suite cases=14 completed=29 aborted=12 accepted=41 class_mask=f mismatches=0"
+      ]
+    },
+    {
+      "name": "golden_protocol_vcd",
+      "status": "PASS",
+      "file": "build/phase2a/20261016_170307/golden_protocol.vcd",
+      "bytes": 6318560
+    },
+    {
+      "name": "signed_corners",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307\\signed_corners.wlf",
+        "-gMODEL_FILE=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/phase2a/corner_model.hex",
+        "work.tb_ecg_mlp",
+        "+VECTORS=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/phase2a/corner.mem",
+        "+CASES=4",
+        "+ERROR_STAGE=0",
+        "+PROTOCOL=0",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase2a/20261016_170307/signed_corners.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/signed_corners.log",
+      "warning_lines": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "error_lines": [],
+      "pass_lines": [
+        "PASS inference case=0 class=1 error_stage=0 cycles=461",
+        "PASS inference case=1 class=1 error_stage=0 cycles=461",
+        "PASS inference case=2 class=0 error_stage=0 cycles=461",
+        "PASS inference case=3 class=1 error_stage=0 cycles=461",
+        "PASS inference case=0 class=1 error_stage=0 cycles=461",
+        "PASS inference case=3 class=1 error_stage=0 cycles=461",
+        "PASS MLP suite cases=4 completed=6 aborted=0 accepted=6 class_mask=3 mismatches=0"
+      ]
+    },
+    {
+      "name": "signed_corners_vcd",
+      "status": "PASS",
+      "file": "build/phase2a/20261016_170307/signed_corners.vcd",
+      "bytes": 791559
+    },
+    {
+      "name": "norm_overflow",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307\\norm_overflow.wlf",
+        "-gMODEL_FILE=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/phase2a/norm_overflow_model.hex",
+        "work.tb_ecg_mlp",
+        "+VECTORS=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/phase2a/norm_overflow.mem",
+        "+CASES=2",
+        "+ERROR_STAGE=1",
+        "+PROTOCOL=0",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase2a/20261016_170307/norm_overflow.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/norm_overflow.log",
+      "warning_lines": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "error_lines": [],
+      "pass_lines": [
+        "PASS inference case=0 class=0 error_stage=1 cycles=13",
+        "PASS inference case=1 class=0 error_stage=1 cycles=13",
+        "PASS inference case=0 class=0 error_stage=1 cycles=13",
+        "PASS inference case=1 class=0 error_stage=1 cycles=13",
+        "PASS inference case=2 class=3 error_stage=0 cycles=461",
+        "PASS successful_recovery_after_overflow_without_reset",
+        "PASS MLP suite cases=2 completed=5 aborted=0 accepted=5 class_mask=8 mismatches=0"
+      ]
+    },
+    {
+      "name": "norm_overflow_vcd",
+      "status": "PASS",
+      "file": "build/phase2a/20261016_170307/norm_overflow.vcd",
+      "bytes": 262795
+    },
+    {
+      "name": "fc1_overflow",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307\\fc1_overflow.wlf",
+        "-gMODEL_FILE=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/phase2a/fc1_overflow_model.hex",
+        "work.tb_ecg_mlp",
+        "+VECTORS=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/phase2a/fc1_overflow.mem",
+        "+CASES=2",
+        "+ERROR_STAGE=2",
+        "+PROTOCOL=0",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase2a/20261016_170307/fc1_overflow.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/fc1_overflow.log",
+      "warning_lines": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "error_lines": [],
+      "pass_lines": [
+        "PASS inference case=0 class=0 error_stage=2 cycles=76",
+        "PASS inference case=1 class=0 error_stage=2 cycles=76",
+        "PASS inference case=0 class=0 error_stage=2 cycles=76",
+        "PASS inference case=1 class=0 error_stage=2 cycles=76",
+        "PASS inference case=2 class=0 error_stage=0 cycles=461",
+        "PASS successful_recovery_after_overflow_without_reset",
+        "PASS MLP suite cases=2 completed=5 aborted=0 accepted=5 class_mask=1 mismatches=0"
+      ]
+    },
+    {
+      "name": "fc1_overflow_vcd",
+      "status": "PASS",
+      "file": "build/phase2a/20261016_170307/fc1_overflow.vcd",
+      "bytes": 221066
+    },
+    {
+      "name": "fc2_positive_overflow",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307\\fc2_positive_overflow.wlf",
+        "-gMODEL_FILE=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/phase2a/fc2_positive_overflow_model.hex",
+        "work.tb_ecg_mlp",
+        "+VECTORS=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/phase2a/fc2_positive_overflow.mem",
+        "+CASES=1",
+        "+ERROR_STAGE=3",
+        "+PROTOCOL=0",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase2a/20261016_170307/fc2_positive_overflow.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/fc2_positive_overflow.log",
+      "warning_lines": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "error_lines": [],
+      "pass_lines": [
+        "PASS inference case=0 class=0 error_stage=3 cycles=376",
+        "PASS inference case=0 class=0 error_stage=3 cycles=376",
+        "PASS inference case=0 class=0 error_stage=3 cycles=376",
+        "PASS inference case=1 class=0 error_stage=0 cycles=461",
+        "PASS successful_recovery_after_overflow_without_reset",
+        "PASS MLP suite cases=1 completed=4 aborted=0 accepted=4 class_mask=1 mismatches=0"
+      ]
+    },
+    {
+      "name": "fc2_positive_overflow_vcd",
+      "status": "PASS",
+      "file": "build/phase2a/20261016_170307/fc2_positive_overflow.vcd",
+      "bytes": 395259
+    },
+    {
+      "name": "fc2_negative_overflow",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307\\fc2_negative_overflow.wlf",
+        "-gMODEL_FILE=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/phase2a/fc2_negative_overflow_model.hex",
+        "work.tb_ecg_mlp",
+        "+VECTORS=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/tests/vectors/phase2a/fc2_negative_overflow.mem",
+        "+CASES=1",
+        "+ERROR_STAGE=3",
+        "+PROTOCOL=0",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase2a/20261016_170307/fc2_negative_overflow.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase2a\\20261016_170307",
+      "log": "build/phase2a/20261016_170307/fc2_negative_overflow.log",
+      "warning_lines": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "error_lines": [],
+      "pass_lines": [
+        "PASS inference case=0 class=0 error_stage=3 cycles=376",
+        "PASS inference case=0 class=0 error_stage=3 cycles=376",
+        "PASS inference case=0 class=0 error_stage=3 cycles=376",
+        "PASS inference case=1 class=0 error_stage=0 cycles=461",
+        "PASS successful_recovery_after_overflow_without_reset",
+        "PASS MLP suite cases=1 completed=4 aborted=0 accepted=4 class_mask=1 mismatches=0"
+      ]
+    },
+    {
+      "name": "fc2_negative_overflow_vcd",
+      "status": "PASS",
+      "file": "build/phase2a/20261016_170307/fc2_negative_overflow.vcd",
+      "bytes": 397144
+    }
+  ],
+  "source_sha256": {
+    "rtl/ecg/ecg_q12_20_pkg.sv": "e1a6a0d04b763976ae94855a73fc0ad37a5ff65ed6aa6d0ee38f3eed692348c0",
+    "rtl/ecg/ecg_model_rom.sv": "96247d52e405a502057b5ab5b7de6ef8d0f45518a196183488d58f4107d372c2",
+    "rtl/ecg/ecg_mlp_core.sv": "a5b3c87d71875e55647b2515b73407cdcbc71d98c59a6544b6015f25b54c2b43",
+    "tb/ecg/tb_ecg_arithmetic.sv": "452dd4fddd34f8f998b3f57a050ad0ffca8b83e1f40dd4963ddb1041d438022f",
+    "tb/ecg/tb_ecg_rom.sv": "499ad7f61eaf45670e1c1132a67aa68d572f197d09868330187469e1c108dd8d",
+    "tb/ecg/tb_ecg_mlp.sv": "8d6145a3f4cde5babd8ac5275f8dba9aa6dda6313eb734e82b6ff7927b500ab0",
+    "tools/export_ecg_sv_vectors.py": "9fe5296c1744b93eff69681caaae59bf1a6a3e1092fd62e7baeb089692a4f1e2",
+    "tools/run_ecg_rtl.py": "7e162236537b2fa9bbdef806adfde714cb2238948eed4cc3b887944a501f2111",
+    "tests/vectors/ecg_golden.json": "71da82feadeba1e98bf4f2e0d4cd3fba73653ff52b75c0246ec6ee3bf167680a",
+    "tests/vectors/model_q12_20.hex": "44b77346ac8d1636c2ccd30e2dce936e993560bfb2d37d4aa4d4e6250a847f41"
+  },
+  "synthesis_timing_resources": {
+    "status": "NOT RUN",
+    "reason": "No Vivado synthesis/place-and-route run in Phase 2A"
+  }
+}

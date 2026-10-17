@@ -1,0 +1,76 @@
+{
+  "checks": {
+    "measurement": "PASS",
+    "float64_formula_agreement": "PASS",
+    "float32_bit_identity_to_ideal_count_formula": "FAIL",
+    "raw_training_preprocessing_parity": "NOT RUN"
+  },
+  "scope": "Same synthetic integer count values cast to float32 or float64; AST-extracted feature function only, no dataset/preprocessing execution",
+  "python": "3.12.10",
+  "numpy": "2.5.4",
+  "training_source_sha256": "9d072d022be019ca76580f2952520f7d6bc25be05d959eb7b31c9d0b94eb69ff",
+  "case_count": 28,
+  "feature_order": [
+    "f_rms",
+    "f_var",
+    "f_peak",
+    "f_zc",
+    "f_ptp",
+    "f_crest",
+    "f_half_ratio",
+    "f_max",
+    "f_rr",
+    "f_rr_prev",
+    "f_rr_ratio",
+    "f_rr_diff"
+  ],
+  "float32_max_abs_difference_from_ideal_as_binary64": [
+    0.0014447369139816146,
+    171.06726241111755,
+    0.0,
+    0.0,
+    0.0,
+    1.2727396914158362e-07,
+    264815.55615234375,
+    0.0,
+    0.0,
+    0.0,
+    4.76837158203125e-07,
+    1.1641532182693481e-09
+  ],
+  "float64_max_abs_difference_from_ideal_as_binary64": [
+    3.637978807091713e-12,
+    1.1920928955078125e-07,
+    0.0,
+    0.0,
+    0.0,
+    2.220446049250313e-16,
+    0.00390625,
+    0.0,
+    0.0,
+    0.0,
+    4.76837158203125e-07,
+    1.1641532182693481e-09
+  ],
+  "float32_differing_cases_per_feature": [
+    18,
+    18,
+    0,
+    0,
+    0,
+    23,
+    23,
+    0,
+    0,
+    0,
+    8,
+    7
+  ],
+  "note": "These are floating arithmetic differences on synthetic counts, not a trained-model or real-preprocessing equivalence test. Float64 agreement tolerance independently checked by unittest; bit identity not required by count-domain fixed contract.",
+  "float64_tolerance": {
+    "relative": 2e-14,
+    "absolute": 1e-12,
+    "passed_cases": 28,
+    "cases": 28
+  }
+}

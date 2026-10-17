@@ -1,0 +1,165 @@
+aalled=0",
+        "PASS FEATURES case=9 all12 bit_exact stalled=0",
+        "PASS FEATURES case=10 all12 bit_exact stalled=0",
+        "PASS FEATURES case=11 all12 bit_exact stalled=0",
+        "PASS FEATURES case=12 all12 bit_exact stalled=0",
+        "PASS FEATURES case=13 all12 bit_exact stalled=0",
+        "PASS FEATURES case=14 all12 bit_exact stalled=0",
+        "PASS FEATURES case=15 all12 bit_exact stalled=0",
+        "PASS FEATURES case=16 all12 bit_exact stalled=0",
+        "PASS FEATURES case=17 all12 bit_exact stalled=0",
+        "PASS FEATURES case=18 all12 bit_exact stalled=0",
+        "PASS FEATURES case=19 all12 bit_exact stalled=0",
+        "PASS FEATURES case=20 all12 bit_exact stalled=0",
+        "PASS FEATURES case=21 all12 bit_exact stalled=0",
+        "PASS FEATURES case=22 all12 bit_exact stalled=0",
+        "PASS FEATURES case=23 all12 bit_exact stalled=0",
+        "PASS FEATURES case=24 all12 bit_exact stalled=0",
+        "PASS FEATURES case=25 all12 bit_exact stalled=0",
+        "PASS FEATURES case=26 all12 bit_exact stalled=0",
+        "PASS FEATURES case=27 all12 bit_exact stalled=0",
+        "PASS FEATURE_CORE cases=28 completed=30 faults=5 reset_aborts=3 accepted=38 requests=11802 responses=11800 req_stalls=0 rsp_stalls=14 output_stalls=510 latency_min=3133 latency_max=3133 mismatches=0"
+      ]
+    },
+    {
+      "name": "features_direct_vcd",
+      "status": "PASS",
+      "file": "build/phase3c/20261017_081043_552454/features_direct.vcd",
+      "bytes": 5451756
+    },
+    {
+      "name": "features_stalled",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\MentorGraphics\\win64\\vsim.exe",
+        "-c",
+        "-onfinish",
+        "stop",
+        "-voptargs=+acc",
+        "-wlf",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_081043_552454\\features_stalled.wlf",
+        "-gSTALLED=1",
+        "+VECTORS=C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3c/20261017_081043_552454/vectors",
+        "+CASES=28",
+        "work.tb_ecg_feature_core",
+        "-do",
+        "do {C:/Users/giado/ECG_Project/windowBuffer_featureExtraction/build/phase3c/20261017_081043_552454/features_stalled.do}"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3c\\20261017_081043_552454",
+      "log": "build/phase3c/20261017_081043_552454/features_stalled.log",
+      "errors": [],
+      "warnings": [
+        "# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility."
+      ],
+      "pass_lines": [
+        "PASS FEATURES case=0 all12 bit_exact stalled=1",
+        "PASS FEATURES case=1 all12 bit_exact stalled=1",
+        "PASS FEATURES case=2 all12 bit_exact stalled=1",
+        "PASS FEATURES case=3 all12 bit_exact stalled=1",
+        "PASS FEATURES case=4 all12 bit_exact stalled=1",
+        "PASS FEATURES case=5 all12 bit_exact stalled=1",
+        "PASS FEATURES case=6 all12 bit_exact stalled=1",
+        "PASS FEATURES case=7 all12 bit_exact stalled=1",
+        "PASS FEATURES case=8 all12 bit_exact stalled=1",
+        "PASS FEATURES case=9 all12 bit_exact stalled=1",
+        "PASS FEATURES case=10 all12 bit_exact stalled=1",
+        "PASS FEATURES case=11 all12 bit_exact stalled=1",
+        "PASS FEATURES case=12 all12 bit_exact stalled=1",
+        "PASS FEATURES case=13 all12 bit_exact stalled=1",
+        "PASS FEATURES case=14 all12 bit_exact stalled=1",
+        "PASS FEATURES case=15 all12 bit_exact stalled=1",
+        "PASS FEATURES case=16 all12 bit_exact stalled=1",
+        "PASS FEATURES case=17 all12 bit_exact stalled=1",
+        "PASS FEATURES case=18 all12 bit_exact stalled=1",
+        "PASS FEATURES case=19 all12 bit_exact stalled=1",
+        "PASS FEATURES case=20 all12 bit_exact stalled=1",
+        "PASS FEATURES case=21 all12 bit_exact stalled=1",
+        "PASS FEATURES case=22 all12 bit_exact stalled=1",
+        "PASS FEATURES case=23 all12 bit_exact stalled=1",
+        "PASS FEATURES case=24 all12 bit_exact stalled=1",
+        "PASS FEATURES case=25 all12 bit_exact stalled=1",
+        "PASS FEATURES case=26 all12 bit_exact stalled=1",
+        "PASS FEATURES case=27 all12 bit_exact stalled=1",
+        "PASS FEATURE_CORE cases=28 completed=30 faults=5 reset_aborts=3 accepted=38 requests=11802 responses=11800 req_stalls=3955 rsp_stalls=3987 output_stalls=510 latency_min=3332 latency_max=3396 mismatches=0"
+      ]
+    },
+    {
+      "name": "features_stalled_vcd",
+      "status": "PASS",
+      "file": "build/phase3c/20261017_081043_552454/features_stalled.vcd",
+      "bytes": 5906484
+    },
+    {
+      "name": "verilator_lint",
+      "status": "NOT RUN",
+      "reason": "Executable not found on PATH; no installation"
+    },
+    {
+      "name": "prior_regressions",
+      "status": "PASS",
+      "exit_code": 0,
+      "command": [
+        "C:\\Users\\giado\\ECG_Project\\.phase1a_env\\Scripts\\python.exe",
+        "-B",
+        "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\tools\\run_ecg_window_tests.py",
+        "--questa-dir",
+        "C:\\MentorGraphics\\win64"
+      ],
+      "cwd": "C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction",
+      "log": "build/phase3c/20261017_081043_552454/prior_regressions.log",
+      "errors": [
+        "FAIL legacy_last_sample (baseline reproduced)"
+      ],
+      "warnings": [],
+      "pass_lines": [
+        "PASS questa_version",
+        "PASS vlib",
+        "PASS vmap_init",
+        "PASS vmap_work",
+        "PASS window_lint_compile",
+        "PASS legacy_compile",
+        "PASS window_elaboration",
+        "PASS window347",
+        "PASS window500",
+        "PASS window1",
+        "PASS replay_window347",
+        "PASS pulse_window347",
+        "PASS sample_and_mlp_regression",
+        "PASS Phase 3B: C:\\Users\\giado\\ECG_Project\\windowBuffer_featureExtraction\\build\\phase3b\\20261017_081254_133949"
+      ]
+    },
+    {
+      "name": "prior_regression_summary",
+      "status": "PASS"
+    },
+    {
+      "name": "sources_unchanged_during_run",
+      "status": "PASS"
+    }
+  ],
+  "source_sha256": {
+    "rtl/ecg/ecg_window_buffer.sv": "240ec5d16b21e7ffa5e906c964e34fe54478892f434641f3be95bc09c73f2bed",
+    "rtl/ecg/ecg_feature_math.sv": "074643c5b5f2afe04ceb1333ca7cfcb638d27e62f8a32b0ae8eb40852a3fc2a3",
+    "rtl/ecg/ecg_feature_core.sv": "199af2035dda127c6012eb6d88bd105e6c7d29c5322bd3a11479848bbd2f2668",
+    "tb/ecg/tb_ecg_feature_math.sv": "2c849a68efb4725340977724a89bb12144c7c6bc7b7766016cbac0ba13c195f9",
+    "tb/ecg/tb_ecg_feature_core.sv": "76ef1f5d9cc3ba447b21a268335bb92a2523fff27a71fc714e99b0cfca07b908",
+    "tools/run_ecg_feature_tests.py": "7e4f0c438a2a98f533dcc708e689361d2ffad8536edf1c5fbb0cee87c0e24f66",
+    "tools/ecg_feature_reference.py": "b72ffaf6224143c056ef85601fdd5596bff53e7f498d001c567ea1f67582a1b7",
+    "tests/test_ecg_feature_reference.py": "26cda1c9beb8613a45ebbf2d268bb65d8a2a9b52f1bd0102c4acfb1fc0d3f60f",
+    "tools/ecg_reference.py": "e148c04516e1adbb2ef9de88a5453f7b2931d6c69a3c0ae19baaf1851e38c77c",
+    "docs/phase3c_numeric_contract.md": "9ee32be510c73035a0c36d98b63e604e3cbd76ed1ff6e425a90a0855210316a9"
+  },
+  "vector_sha256": {
+    "build/phase3c/20261017_081043_552454/vectors/expected.mem": "ebd8c607e9a2dfdb2d0983c89694723ef0835958c59681209d152668a9774f58",
+    "build/phase3c/20261017_081043_552454/vectors/features.json": "0fc4ce75a0fa6bfd3137b81a08408467bc35ae8f3331a64c7b6a169847ad27c1",
+    "build/phase3c/20261017_081043_552454/vectors/math.mem": "70d8d5b0470bf02a2d3e4a2f5590cb6d4e526e26ee79a71648d71a12d1f3c673",
+    "build/phase3c/20261017_081043_552454/vectors/rr.mem": "0494085b6aa1080e28e9ed5fb798999d6804c8f5711cd025e1394a4da61f5fb5",
+    "build/phase3c/20261017_081043_552454/vectors/samples.mem": "e351620fd65a94c2155760f0f1ec4da738839db624aa597140de0352c58bd731"
+  },
+  "build_directory": "build/phase3c/20261017_081043_552454",
+  "prior_regression": "build/phase3b/20261017_081254_133949/results.json",
+  "training_preprocessing_parity": "NOT RUN",
+  "hardware_synthesis_timing": "NOT RUN"
+}
+a

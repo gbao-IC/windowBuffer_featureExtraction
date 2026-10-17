@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "checks": {
+    "protected_previous_files": "PASS",
+    "runner_change_only_summary_destination": "PASS",
+    "git_refs_unchanged": "PASS",
+    "training_clean": "PASS",
+    "sample_sources_equal_tested": "PASS",
+    "mlp_sources_equal_tested": "PASS",
+    "report_links": "PASS",
+    "latest_sample_tests": "PASS",
+    "mlp_regression": "PASS"
+  },
+  "previous_file_count": 118,
+  "unchanged_file_count": 117,
+  "changed_previous_files": [
+    {
+      "file": "windowBuffer_featureExtraction/tools/run_ecg_rtl.py",
+      "before": "7e162236537b2fa9bbdef806adfde714cb2238948eed4cc3b887944a501f2111",
+      "after": "a8910779ade61a0e84cfd196195dcd489bbfae709ddf51b1f434f04d3513935e"
+    }
+  ],
+  "refs_before": {
+    "AI_FSM_ECG": {
+      "branch": "main",
+      "head": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+      "main": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+      "status": "",
+      "remotes": "origin\thttps://github.com/gbao-IC/AI_FSM_ECG.git (fetch)\norigin\thttps://github.com/gbao-IC/AI_FSM_ECG.git (push)"
+    },
+    "windowBuffer_featureExtraction": {
+      "branch": "ECG",
+      "head": "983f803b3e3d815a411c46da7ae66006a9d5af03",
+      "main": "9e33a48dab0d5d517ac8adaf4000dca9f8342cda",
+      "status": "?? .gitignore\n?? docs/baseline_audit.md\n?? docs/ecg_spec.md\n?? docs/interface_contract.md\n?? docs/model_manifest.json\n?? docs/phase1a_dataset_results.json\n?? docs/phase1a_integrity.json\n?? docs/phase1a_report.md\n?? docs/phase1a_results.json\n?? docs/phase1a_tests.json\n?? docs/phase1a_tests.log\n?? docs/phase2a_integrity.json\n?? docs/phase2a_report.md\n?? docs/phase2a_results.json\n?? docs/phase2b_integrity.json\n?? docs/phase2b_regression.json\n?? docs/phase2b_report.md\n?? docs/phase2b_results.json\n?? docs/phase2b_script_tests.json\n?? rtl/ecg/ecg_mlp_core.sv\n?? rtl/ecg/ecg_model_rom.sv\n?? rtl/ecg/ecg_q12_20_pkg.sv\n?? synthesis/ecg/ecg_mlp_ooc.xdc\n?? synthesis/ecg/run_vivado.tcl\n?? tb/ecg/tb_ecg_arithmetic.sv\n?? tb/ecg/tb_ecg_mlp.sv\n?? tb/ecg/tb_ecg_rom.sv\n?? tests/test_ecg_reference.py\n?? tests/test_ecg_synthesis_flow.py\n?? tests/vectors/ecg_golden.json\n?? tests/vectors/model_q12_20.hex\n?? tests/vectors/phase2a/arithmetic.mem\n?? tests/vectors/phase2a/corner.mem\n?? tests/vectors/phase2a/corner_model.hex\n?? tests/vectors/phase2a/fc1_overflow.mem\n?? tests/vectors/phase2a/fc1_overflow_model.hex\n?? tests/vectors/phase2a/fc2_negative_overflow.mem\n?? tests/vectors/phase2a/fc2_negative_overflow_model.hex\n?? tests/vectors/phase2a/fc2_positive_overflow.mem\n?? tests/vectors/phase2a/fc2_positive_overflow_model.hex\n?? tests/vectors/phase2a/golden.mem\n?? tests/vectors/phase2a/manifest.json\n?? tests/vectors/phase2a/norm_overflow.mem\n?? tests/vectors/phase2a/norm_overflow_model.hex\n?? tools/audit_ecg_dataset.py\n?? tools/audit_ecg_model.py\n?? tools/ecg_reference.py\n?? tools/export_ecg_sv_vectors.py\n?? tools/run_ecg_rtl.py\n?? tools/run_ecg_synthesis.py\n?? tools/run_ecg_tests.py",
+      "remotes": "origin\thttps://github.com/gbao-IC/windowBuffer_featureExtraction.git (fetch)\norigin\thttps://github.com/gbao-IC/windowBuffer_featureExtraction.git (push)"
+    }
+  },
+  "refs_after": {
+    "AI_FSM_ECG": {
+      "branch": "main",
+      "head": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+      "main": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+      "status": "",
+      "remotes": "origin\thttps://github.com/gbao-IC/AI_FSM_ECG.git (fetch)\norigin\thttps://github.com/gbao-IC/AI_FSM_ECG.git (push)"
+    },
+    "windowBuffer_featureExtraction": {
+      "branch": "ECG",
+      "head": "983f803b3e3d815a411c46da7ae66006a9d5af03",
+      "main": "9e33a48dab0d5d517ac8adaf4000dca9f8342cda",
+      "status": "?? .gitignore\n?? docs/baseline_audit.md\n?? docs/ecg_spec.md\n?? docs/interface_contract.md\n?? docs/model_manifest.json\n?? docs/phase1a_dataset_results.json\n?? docs/phase1a_integrity.json\n?? docs/phase1a_report.md\n?? docs/phase1a_results.json\n?? docs/phase1a_tests.json\n?? docs/phase1a_tests.log\n?? docs/phase2a_integrity.json\n?? docs/phase2a_report.md\n?? docs/phase2a_results.json\n?? docs/phase2b_integrity.json\n?? docs/phase2b_regression.json\n?? docs/phase2b_report.md\n?? docs/phase2b_results.json\n?? docs/phase2b_script_tests.json\n?? docs/phase3a_report.md\n?? docs/phase3a_results.json\n?? docs/phase3a_results_20261016_213535_757364.json\n?? docs/phase3a_results_20261016_213725_979656.json\n?? rtl/ecg/ecg_mlp_core.sv\n?? rtl/ecg/ecg_model_rom.sv\n?? rtl/ecg/ecg_q12_20_pkg.sv\n?? rtl/ecg/ecg_sample_interface.sv\n?? rtl/ecg/ecg_sample_pulse_adapter.sv\n?? synthesis/ecg/ecg_mlp_ooc.xdc\n?? synthesis/ecg/run_vivado.tcl\n?? tb/ecg/tb_ecg_arithmetic.sv\n?? tb/ecg/tb_ecg_mlp.sv\n?? tb/ecg/tb_ecg_rom.sv\n?? tb/ecg/tb_ecg_sample_interface.sv\n?? tb/ecg/tb_legacy_adc_contiguous.sv\n?? tests/test_ecg_reference.py\n?? tests/test_ecg_synthesis_flow.py\n?? tests/vectors/ecg_golden.json\n?? tests/vectors/model_q12_20.hex\n?? tests/vectors/phase2a/arithmetic.mem\n?? tests/vectors/phase2a/corner.mem\n?? tests/vectors/phase2a/corner_model.hex\n?? tests/vectors/phase2a/fc1_overflow.mem\n?? tests/vectors/phase2a/fc1_overflow_model.hex\n?? tests/vectors/phase2a/fc2_negative_overflow.mem\n?? tests/vectors/phase2a/fc2_negative_overflow_model.hex\n?? tests/vectors/phase2a/fc2_positive_overflow.mem\n?? tests/vectors/phase2a/fc2_positive_overflow_model.hex\n?? tests/vectors/phase2a/golden.mem\n?? tests/vectors/phase2a/manifest.json\n?? tests/vectors/phase2a/norm_overflow.mem\n?? tests/vectors/phase2a/norm_overflow_model.hex\n?? tools/audit_ecg_dataset.py\n?? tools/audit_ecg_model.py\n?? tools/ecg_reference.py\n?? tools/export_ecg_sv_vectors.py\n?? tools/run_ecg_rtl.py\n?? tools/run_ecg_sample_tests.py\n?? tools/run_ecg_synthesis.py\n?? tools/run_ecg_tests.py",
+      "remotes": "origin\thttps://github.com/gbao-IC/windowBuffer_featureExtraction.git (fetch)\norigin\thttps://github.com/gbao-IC/windowBuffer_featureExtraction.git (push)"
+    }
+  },
+  "new_files_sha256": {
+    "docs/phase3a_report.md": "fa40c6980ea8bc9523b423571928c4c9961f67f4b2b956c80c0c33876e10da85",
+    "docs/phase3a_results.json": "7cf7e0313eb41ef257110ec7527786582f0ac083e56b56cb82241f3f1dcd45d7",
+    "docs/phase3a_results_20261016_213535_757364.json": "88a902cd29ed870ab3b493465caf9503b22f6b28f3e2401afe4b7e86e6c474f8",
+    "docs/phase3a_results_20261016_213725_979656.json": "899021fb416812d8de80879e3258c74fe7ef88cf1d90f5396a7aa71414f69bc6",
+    "tools/run_ecg_sample_tests.py": "97e9e38245a3c17f4d0a007f69bab67d1989f877ba29d25032b419fffd31008a",
+    "rtl/ecg/ecg_sample_interface.sv": "1e5b8a6ae189e1ddd42597cd38d7258a4ebb69fcc1a1030fa946a6ab22b38e8e",
+    "rtl/ecg/ecg_sample_pulse_adapter.sv": "870e0535fc8d5f3ccdfd168baeb5b4ba4b803a1f2a585638f739a9475a54cd1c",
+    "tb/ecg/tb_ecg_sample_interface.sv": "b1128ec24d043fd03c29e2f2bc786905087b0f41ad96ed85f6389ca6f6f05e74",
+    "tb/ecg/tb_legacy_adc_contiguous.sv": "0fce641da20838d08302c001730e8771f0ad3df4b1614d44112413cff6e9c007"
+  },
+  "missing_report_links": [],
+  "sample_results": "build/phase3a/20261016_213725_979656/results.json",
+  "mlp_results": "build/phase3a/20261016_213725_979656/mlp_results.json",
+  "notes": "No training, existing RTL, MLP, model, golden, phase0-2B docs or main refs modified. Legacy reference and failed/new run logs retained. No install, commit, push, merge or deletion."
+}
