@@ -1,0 +1,669 @@
+{
+  "dataset": {
+    "all_four_classes": "PASS",
+    "class_counts": {
+      "0": 52422,
+      "1": 9353,
+      "2": 9353,
+      "3": 39076
+    },
+    "feature_max": [
+      4.768381595611572,
+      15.82455825805664,
+      5.553721904754639,
+      0.29394812680115273,
+      10.01904010772705,
+      9.277459144592285,
+      13.669700622558594,
+      5.553721904754639,
+      5.872222222222222,
+      5.872222222222222,
+      47.99999712000018,
+      5.1083333333333325
+    ],
+    "feature_min": [
+      0.04724138602614403,
+      0.0005963552393950522,
+      0.09687671065330505,
+      0.0,
+      0.1789959967136383,
+      1.075649380683899,
+      0.12457602471113205,
+      -3.0657308101654053,
+      0.016666666666666666,
+      0.016666666666666666,
+      0.01857585137248512,
+      -4.680555555555555
+    ],
+    "file_name": "AI_Training_12_Features_250Hz_V2.csv",
+    "patient_count": 48,
+    "patient_split_overlap": "NOT RUN: saved train/val/test membership unavailable",
+    "rows": 110204,
+    "sha256": "a82cf74a931d9e00a09617be156416ec269e2ff986dc681dacacf7509cde38b4",
+    "status": "PASS"
+  },
+  "full_population_numeric": {
+    "candidate_class_identity": "PASS",
+    "candidate_input_max_abs_error": 4.76837158203125e-07,
+    "candidate_overflow_count": 0,
+    "candidate_stage_error_budget": "PASS",
+    "class_mismatch_counts_vs_float": {
+      "candidate": 0,
+      "legacy_parameters": 4823
+    },
+    "class_mismatch_examples": {
+      "candidate": [],
+      "legacy_parameters": [
+        {
+          "actual_class": 0,
+          "csv_line": 259,
+          "float_class": 3,
+          "float_margin": 0.1662994488153533,
+          "patient_id": "100",
+          "source_label": 3
+        },
+        {
+          "actual_class": 0,
+          "csv_line": 1821,
+          "float_class": 3,
+          "float_margin": 0.2080057955908572,
+          "patient_id": "100",
+          "source_label": 3
+        },
+        {
+          "actual_class": 0,
+          "csv_line": 2403,
+          "float_class": 3,
+          "float_margin": 0.749235628787619,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 0,
+          "csv_line": 2430,
+          "float_class": 3,
+          "float_margin": 0.6538413203613005,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 0,
+          "csv_line": 2439,
+          "float_class": 3,
+          "float_margin": 0.09215170956836305,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 0,
+          "csv_line": 2445,
+          "float_class": 3,
+          "float_margin": 0.2784898554598678,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 2582,
+          "float_class": 0,
+          "float_margin": 0.024322988959830205,
+          "patient_id": "101",
+          "source_label": 2
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 2590,
+          "float_class": 0,
+          "float_margin": 0.4522295035049515,
+          "patient_id": "101",
+          "source_label": 2
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 2727,
+          "float_class": 0,
+          "float_margin": 0.7121235220617281,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 2728,
+          "float_class": 0,
+          "float_margin": 0.278870110568735,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 2730,
+          "float_class": 0,
+          "float_margin": 0.6479178248388742,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 2739,
+          "float_class": 0,
+          "float_margin": 0.037513088287314034,
+          "patient_id": "101",
+          "source_label": 2
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 2776,
+          "float_class": 0,
+          "float_margin": 0.1045781545443365,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 2786,
+          "float_class": 0,
+          "float_margin": 0.028199602541732816,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 2805,
+          "float_class": 0,
+          "float_margin": 0.40480932208943443,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 2839,
+          "float_class": 0,
+          "float_margin": 0.08513301097385817,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 2899,
+          "float_class": 0,
+          "float_margin": 0.21989646539195906,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 2977,
+          "float_class": 0,
+          "float_margin": 0.03927216269695677,
+          "patient_id": "101",
+          "source_label": 2
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 3022,
+          "float_class": 0,
+          "float_margin": 0.4447671287258359,
+          "patient_id": "101",
+          "source_label": 2
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 3048,
+          "float_class": 0,
+          "float_margin": 0.12319740273080448,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 3064,
+          "float_class": 0,
+          "float_margin": 0.01565734902333915,
+          "patient_id": "101",
+          "source_label": 2
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 3070,
+          "float_class": 0,
+          "float_margin": 0.41794771150868826,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 3093,
+          "float_class": 0,
+          "float_margin": 0.5671143956336024,
+          "patient_id": "101",
+          "source_label": 0
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 3099,
+          "float_class": 0,
+          "float_margin": 0.5247176335132777,
+          "patient_id": "101",
+          "source_label": 2
+        },
+        {
+          "actual_class": 2,
+          "csv_line": 3128,
+          "float_class": 0,
+          "float_margin": 0.03194291599889709,
+          "patient_id": "101",
+          "source_label": 2
+        }
+      ]
+    },
+    "confusion_rows_label_columns_prediction": {
+      "candidate": [
+        [
+          44804,
+          89,
+          482,
+          7047
+        ],
+        [
+          98,
+          8251,
+          0,
+          1004
+        ],
+        [
+          122,
+          0,
+          8970,
+          261
+        ],
+        [
+          1871,
+          1206,
+          238,
+          35761
+        ]
+      ],
+      "float": [
+        [
+          44804,
+          89,
+          482,
+          7047
+        ],
+        [
+          98,
+          8251,
+          0,
+          1004
+        ],
+        [
+          122,
+          0,
+          8970,
+          261
+        ],
+        [
+          1871,
+          1206,
+          238,
+          35761
+        ]
+      ],
+      "legacy_parameters": [
+        [
+          44308,
+          104,
+          684,
+          7326
+        ],
+        [
+          76,
+          7890,
+          0,
+          1387
+        ],
+        [
+          78,
+          0,
+          9039,
+          236
+        ],
+        [
+          2490,
+          1101,
+          249,
+          35236
+        ]
+      ]
+    },
+    "descriptive_full_pool_label_agreement": {
+      "candidate": 0.8873180646800479,
+      "float": 0.8873180646800479,
+      "legacy_parameters": 0.8754037965954049
+    },
+    "float_stage_max_abs": {
+      "hidden": 159.53628098984922,
+      "logits": 699.8920667832434,
+      "normalized": 98.49457651059164,
+      "pre_activation": 363.5830992151494
+    },
+    "held_out_accuracy": "NOT RUN: checkpoint training membership/save provenance unknown; full pool is not a held-out test",
+    "legacy_scope": "Parameter quantization only, binary64 arithmetic and unquantized source features; NOT existing RTL emulation",
+    "max_absolute_errors": {
+      "candidate": {
+        "hidden": 6.332765140015795e-05,
+        "logits": 0.00035805326969828855,
+        "normalized": 4.6014747133671374e-05,
+        "pre_activation": 7.908436149506315e-05
+      },
+      "legacy_parameters": {
+        "hidden": 16.986320397310585,
+        "logits": 14.310800593373973,
+        "normalized": 13.691975957370417,
+        "pre_activation": 16.986320397310585
+      }
+    },
+    "minimum_float_logit_margin": 7.521574874935766e-06,
+    "overflow_examples": [],
+    "raw_q4_12_export_clamp_count_by_feature": {
+      "f_crest": 128,
+      "f_half_ratio": 1,
+      "f_max": 0,
+      "f_peak": 0,
+      "f_ptp": 3,
+      "f_rms": 0,
+      "f_rr": 0,
+      "f_rr_diff": 0,
+      "f_rr_prev": 0,
+      "f_rr_ratio": 87,
+      "f_var": 2,
+      "f_zc": 0
+    },
+    "raw_q4_12_out_of_range_by_feature": {
+      "f_crest": 128,
+      "f_half_ratio": 1,
+      "f_max": 0,
+      "f_peak": 0,
+      "f_ptp": 3,
+      "f_rms": 0,
+      "f_rr": 0,
+      "f_rr_diff": 0,
+      "f_rr_prev": 0,
+      "f_rr_ratio": 87,
+      "f_var": 2,
+      "f_zc": 0
+    },
+    "rows": 110204,
+    "status": "PASS",
+    "tolerances": {
+      "hidden": 0.002,
+      "logits": 0.01,
+      "normalized": 0.001,
+      "pre_activation": 0.002
+    }
+  },
+  "preprocessing_from_raw": {
+    "reason": "Only feature CSV supplied; no raw ECG or annotations.",
+    "status": "NOT RUN"
+  },
+  "python_version": "3.12.10",
+  "scaler_reconstruction": {
+    "absolute_tolerance": 1e-12,
+    "fitted_mean": [
+      0.5049280698141774,
+      0.128175925778994,
+      1.480263449684342,
+      0.018844285589729077,
+      2.2568578553014405,
+      3.3368743504445257,
+      0.9066571440437697,
+      1.2585002575108473,
+      0.7857720538458572,
+      0.7854566902595146,
+      1.0457870802467724,
+      0.00031536358634437473
+    ],
+    "fitted_scale": [
+      0.26097493646625924,
+      0.15936291000337194,
+      0.5303913206158861,
+      0.01730963665434547,
+      0.8713327041301695,
+      1.2962174890070337,
+      0.24728357842664744,
+      0.6220374466128002,
+      0.22467453703075493,
+      0.22401411637549168,
+      0.4821244936654567,
+      0.21710438945930516
+    ],
+    "limitation": "Reconstructed split from current CSV/code; matching scaler does not establish checkpoint save history or held-out provenance.",
+    "mean_errors": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "mean_max_abs_error": 0.0,
+    "patient_disjoint": {
+      "overlap_ids": {
+        "train_test": [
+          "100",
+          "101",
+          "102",
+          "103",
+          "104",
+          "105",
+          "106",
+          "107",
+          "108",
+          "109",
+          "111",
+          "112",
+          "113",
+          "114",
+          "115",
+          "116",
+          "117",
+          "118",
+          "119",
+          "121",
+          "122",
+          "123",
+          "124",
+          "200",
+          "201",
+          "202",
+          "203",
+          "205",
+          "207",
+          "208",
+          "209",
+          "210",
+          "212",
+          "213",
+          "214",
+          "215",
+          "217",
+          "219",
+          "220",
+          "221",
+          "222",
+          "223",
+          "228",
+          "230",
+          "231",
+          "232",
+          "233",
+          "234"
+        ],
+        "train_validation": [
+          "100",
+          "101",
+          "102",
+          "103",
+          "104",
+          "105",
+          "106",
+          "107",
+          "108",
+          "109",
+          "111",
+          "112",
+          "113",
+          "114",
+          "115",
+          "116",
+          "117",
+          "118",
+          "119",
+          "121",
+          "122",
+          "123",
+          "124",
+          "200",
+          "201",
+          "202",
+          "203",
+          "205",
+          "207",
+          "208",
+          "209",
+          "210",
+          "212",
+          "213",
+          "214",
+          "215",
+          "217",
+          "219",
+          "220",
+          "221",
+          "222",
+          "223",
+          "228",
+          "230",
+          "231",
+          "232",
+          "233",
+          "234"
+        ],
+        "validation_test": [
+          "100",
+          "101",
+          "102",
+          "103",
+          "104",
+          "105",
+          "106",
+          "107",
+          "108",
+          "109",
+          "111",
+          "112",
+          "113",
+          "114",
+          "115",
+          "116",
+          "117",
+          "118",
+          "119",
+          "121",
+          "122",
+          "123",
+          "124",
+          "200",
+          "201",
+          "202",
+          "203",
+          "205",
+          "207",
+          "208",
+          "209",
+          "210",
+          "212",
+          "213",
+          "214",
+          "215",
+          "217",
+          "219",
+          "220",
+          "221",
+          "222",
+          "223",
+          "228",
+          "230",
+          "231",
+          "232",
+          "233",
+          "234"
+        ]
+      },
+      "status": "FAIL"
+    },
+    "scale_errors": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale_max_abs_error": 0.0,
+    "splits": {
+      "test": {
+        "class_counts": {
+          "0": 7864,
+          "1": 1403,
+          "2": 1403,
+          "3": 5861
+        },
+        "patients": 48,
+        "rows": 16531
+      },
+      "train": {
+        "class_counts": {
+          "0": 36695,
+          "1": 6547,
+          "2": 6547,
+          "3": 27353
+        },
+        "patients": 48,
+        "rows": 77142
+      },
+      "validation": {
+        "class_counts": {
+          "0": 7863,
+          "1": 1403,
+          "2": 1403,
+          "3": 5862
+        },
+        "patients": 48,
+        "rows": 16531
+      }
+    },
+    "status": "PASS",
+    "versions": {
+      "numpy": "2.5.4",
+      "pandas": "3.0.6",
+      "scikit-learn": "1.9.1"
+    }
+  },
+  "source_hashes": {
+    "tools/audit_ecg_dataset.py": "a1c0799831f5bbd0b7ba53033bafaef65d61f63ffce5748694f12b3ee9e1664b",
+    "tools/ecg_reference.py": "e148c04516e1adbb2ef9de88a5453f7b2931d6c69a3c0ae19baaf1851e38c77c"
+  }
+}

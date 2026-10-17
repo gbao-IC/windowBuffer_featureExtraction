@@ -1,0 +1,211 @@
+{
+  "activation": "ReLU",
+  "candidate": {
+    "accumulator_bits": 68,
+    "accumulator_fractional_bits": 40,
+    "bias_alignment": "left shift 20; round only after full dot product",
+    "bits": 32,
+    "fractional_bits": 20,
+    "mac_product_bits": 64,
+    "normalizer_product_bits": 65,
+    "overflow": "reject, never silently saturate",
+    "range": [
+      -2048,
+      2047.9999990463257
+    ],
+    "requires": "Dataset range audit, accuracy/margin acceptance, and hardware width/cost approval. No finite format covers unconstrained half_ratio.",
+    "rounding": "nearest ties to even",
+    "status": "PROPOSED, not an approved/retrained/deployable model",
+    "subtraction_bits": 33
+  },
+  "feature_dataset": {
+    "all_four_classes": "PASS",
+    "class_counts": {
+      "0": 52422,
+      "1": 9353,
+      "2": 9353,
+      "3": 39076
+    },
+    "feature_max": [
+      4.768381595611572,
+      15.82455825805664,
+      5.553721904754639,
+      0.29394812680115273,
+      10.01904010772705,
+      9.277459144592285,
+      13.669700622558594,
+      5.553721904754639,
+      5.872222222222222,
+      5.872222222222222,
+      47.99999712000018,
+      5.1083333333333325
+    ],
+    "feature_min": [
+      0.04724138602614403,
+      0.0005963552393950522,
+      0.09687671065330505,
+      0.0,
+      0.1789959967136383,
+      1.075649380683899,
+      0.12457602471113205,
+      -3.0657308101654053,
+      0.016666666666666666,
+      0.016666666666666666,
+      0.01857585137248512,
+      -4.680555555555555
+    ],
+    "file_name": "AI_Training_12_Features_250Hz_V2.csv",
+    "patient_count": 48,
+    "patient_split_overlap": "NOT RUN: saved train/val/test membership unavailable",
+    "rows": 110204,
+    "sha256": "a82cf74a931d9e00a09617be156416ec269e2ff986dc681dacacf7509cde38b4",
+    "status": "PASS"
+  },
+  "feature_order": [
+    "f_rms",
+    "f_var",
+    "f_peak",
+    "f_zc",
+    "f_ptp",
+    "f_crest",
+    "f_half_ratio",
+    "f_max",
+    "f_rr",
+    "f_rr_prev",
+    "f_rr_ratio",
+    "f_rr_diff"
+  ],
+  "generated_artifacts": {
+    "tests/vectors/ecg_golden.json": "71da82feadeba1e98bf4f2e0d4cd3fba73653ff52b75c0246ec6ee3bf167680a",
+    "tests/vectors/model_q12_20.hex": "44b77346ac8d1636c2ccd30e2dce936e993560bfb2d37d4aa4d4e6250a847f41"
+  },
+  "generators": {
+    "tools/audit_ecg_model.py": "a9f9bd7365531fb9a2dd8a5f11dc0a2acaa467701ee92d0f4c33b31ef3e63f17",
+    "tools/ecg_reference.py": "e148c04516e1adbb2ef9de88a5453f7b2931d6c69a3c0ae19baaf1851e38c77c"
+  },
+  "inputs": {
+    "GSR.v": {
+      "bytes": 83,
+      "sha256": "7ab94d5cabf64f2afa67bb3046ff4a344c4f57e11508a44caff2b4e8ae3ea004"
+    },
+    "README.md": {
+      "bytes": 244,
+      "sha256": "82aa0bb33721d8de4e7f5baf51dca2ffed4409915e986a6dd859fcd8c3c5fc6a"
+    },
+    "convert_to_hex.py": {
+      "bytes": 4613,
+      "sha256": "548955162868fd1dfaa51e4de6f0cf13761e3861f3d2c2da037bf76e545f6e2e"
+    },
+    "create_dataset.py": {
+      "bytes": 8247,
+      "sha256": "9d072d022be019ca76580f2952520f7d6bc25be05d959eb7b31c9d0b94eb69ff"
+    },
+    "feature_extract_column.py": {
+      "bytes": 485,
+      "sha256": "f4f67a0a39e784b32f467f94cc9e157f14c1b7d03c3e759ff176ff36a89a1fab"
+    },
+    "first_500.txt": {
+      "bytes": 36000,
+      "sha256": "6f2ab0ad534c43ef8b661171a7565c8b504388d1e14b44b404a722ee3d190722"
+    },
+    "gowin_dpb.v": {
+      "bytes": 2782,
+      "sha256": "7efa7fcc18d878201c1fd557df2c0db8b402dd1cf923d4e3edbde6cd1d02039f"
+    },
+    "hr_top.v": {
+      "bytes": 11808,
+      "sha256": "15939db1c925bbbc5f29efec83832947a15ecfb255cec09c69042c7922af4151"
+    },
+    "label.txt": {
+      "bytes": 1500,
+      "sha256": "f9628d14c336206eedf425c73a5d376df8553f3e6e2b3e66c38934daba23becc"
+    },
+    "mlp_fpga_best.pth": {
+      "bytes": 3033,
+      "sha256": "a085cdf6c7a4edbea427f6e5afc178fe4d2583cc42136c5a1c021a9044624079"
+    },
+    "prim_sim.v": {
+      "bytes": 18197,
+      "sha256": "e18d2aa5107db8606f4f16e29e300700ee9e2fb7d4114626cafd3962e66acb38"
+    },
+    "scaler_params_fpga.csv": {
+      "bytes": 491,
+      "sha256": "ddc9b4f1d15f234bba9098bd41b81b25488e58000372b87dc2e08ed6af6b043c"
+    },
+    "train_2.py": {
+      "bytes": 8476,
+      "sha256": "ff0972946cc2d1008a4cfdf2490e4985f83dede297702e44cb2ce27d06f8f50b"
+    },
+    "weight.hex": {
+      "bytes": 984,
+      "sha256": "58900c36b13a98e5cf1d9f476041acac272df1ac521617274c42ff968491f6ad"
+    },
+    "weight.mi": {
+      "bytes": 1518,
+      "sha256": "4b6ebe0eade698e7d9e2385b8fcf13f007d817c4096fc429a8c77a3fa1a9c841"
+    }
+  },
+  "labels": {
+    "0": "Normal",
+    "1": "Fast",
+    "2": "Slow",
+    "3": "Abnormal"
+  },
+  "legacy": {
+    "bits": 16,
+    "clipped": [
+      {
+        "address": 15,
+        "block": "inverse_scale",
+        "stored_signed": 32767,
+        "stored_value": 7.999755859375,
+        "unclamped_integer": 236631,
+        "unquantized": 57.77128774964532
+      }
+    ],
+    "fractional_bits": 12,
+    "rounding": "truncate toward zero then saturate"
+  },
+  "network": [
+    12,
+    8,
+    4
+  ],
+  "output": "logits; argmax lowest-index tie",
+  "package_status": "FAIL: legacy clipping and unproven checkpoint/scaler training pairing",
+  "schema": "ecg-model-package-audit-v1",
+  "serialization": [
+    {
+      "count": 12,
+      "first_address": 0,
+      "name": "mean"
+    },
+    {
+      "count": 12,
+      "first_address": 12,
+      "name": "inverse_scale"
+    },
+    {
+      "count": 96,
+      "first_address": 24,
+      "name": "fc1.weight"
+    },
+    {
+      "count": 8,
+      "first_address": 120,
+      "name": "fc1.bias"
+    },
+    {
+      "count": 32,
+      "first_address": 128,
+      "name": "fc2.weight"
+    },
+    {
+      "count": 4,
+      "first_address": 160,
+      "name": "fc2.bias"
+    }
+  ],
+  "training_commit": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+  "weight_orientation": "output-neuron-major, then input feature; contiguous C order"
+}

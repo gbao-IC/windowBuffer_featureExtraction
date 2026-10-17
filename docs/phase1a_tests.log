@@ -1,0 +1,42 @@
+test_accumulator_width_guard (test_ecg_reference.ArithmeticTests.test_accumulator_width_guard) ... ok
+test_argmax_ties_and_all_negative (test_ecg_reference.ArithmeticTests.test_argmax_ties_and_all_negative) ... ok
+test_feature_count_and_scaler_validation (test_ecg_reference.ArithmeticTests.test_feature_count_and_scaler_validation) ... ok
+test_hand_calculated_mlp_including_relu_signed_argmax (test_ecg_reference.ArithmeticTests.test_hand_calculated_mlp_including_relu_signed_argmax) ... ok
+test_layer_overflow_is_not_saturation (test_ecg_reference.ArithmeticTests.test_layer_overflow_is_not_saturation) ... ok
+test_legacy_truncation_and_clipping (test_ecg_reference.ArithmeticTests.test_legacy_truncation_and_clipping) ... ok
+test_nearest_even_positive_and_negative_ties (test_ecg_reference.ArithmeticTests.test_nearest_even_positive_and_negative_ties) ... ok
+test_nonfinite_and_invalid_divisor_rejected (test_ecg_reference.ArithmeticTests.test_nonfinite_and_invalid_divisor_rejected) ... ok
+test_normalizer_overflow_is_not_saturation (test_ecg_reference.ArithmeticTests.test_normalizer_overflow_is_not_saturation) ... ok
+test_q12_20_endpoints_and_overflow (test_ecg_reference.ArithmeticTests.test_q12_20_endpoints_and_overflow) ... ok
+test_rounding_matches_exact_fraction_randomly (test_ecg_reference.ArithmeticTests.test_rounding_matches_exact_fraction_randomly) ... ok
+test_all_twelve_hand_computed_features (test_ecg_reference.FeatureTests.test_all_twelve_hand_computed_features) ... ok
+test_crest_fifteen_and_unbounded_half_ratio (test_ecg_reference.FeatureTests.test_crest_fifteen_and_unbounded_half_ratio) ... ok
+test_first_last_sample_and_negative_peak (test_ecg_reference.FeatureTests.test_first_last_sample_and_negative_peak) ... ok
+test_four_label_rules_and_thresholds (test_ecg_reference.FeatureTests.test_four_label_rules_and_thresholds) ... ok
+test_fourier_resampling_known_dc_sine_and_discarded_frequency (test_ecg_reference.FeatureTests.test_fourier_resampling_known_dc_sine_and_discarded_frequency) ... ok
+test_invalid_rr_and_empty_window (test_ecg_reference.FeatureTests.test_invalid_rr_and_empty_window) ... ok
+test_labels_against_extracted_training_function (test_ecg_reference.FeatureTests.test_labels_against_extracted_training_function) ... ok
+test_odd_half_window_denominators (test_ecg_reference.FeatureTests.test_odd_half_window_denominators) ... ok
+test_zero_signal_and_rr_in_seconds (test_ecg_reference.FeatureTests.test_zero_signal_and_rr_in_seconds) ... ok
+test_numpy_original_feature_function_float64_parity (test_ecg_reference.OptionalRuntimeTests.test_numpy_original_feature_function_float64_parity) ... ok
+test_pytorch_checkpoint_and_forward_parity (test_ecg_reference.OptionalRuntimeTests.test_pytorch_checkpoint_and_forward_parity) ... ok
+test_scipy_resampler_float64_and_float32_parity (test_ecg_reference.OptionalRuntimeTests.test_scipy_resampler_float64_and_float32_parity) ... ok
+test_500_vectors_fixed_intermediates_against_fraction_oracle (test_ecg_reference.PackageTests.test_500_vectors_fixed_intermediates_against_fraction_oracle) ... ok
+test_all_164_legacy_words_and_mi_serialization (test_ecg_reference.PackageTests.test_all_164_legacy_words_and_mi_serialization) ... ok
+test_checkpoint_matches_independent_raw_storage_decode (test_ecg_reference.PackageTests.test_checkpoint_matches_independent_raw_storage_decode) ... ok
+test_confirmed_clipping_at_address_15_only (test_ecg_reference.PackageTests.test_confirmed_clipping_at_address_15_only) ... ok
+test_dataset_reordered_features_are_rejected (test_ecg_reference.PackageTests.test_dataset_reordered_features_are_rejected) ... ok
+test_feature_order_and_source_architecture (test_ecg_reference.PackageTests.test_feature_order_and_source_architecture) ... ok
+test_full_dataset_counter_and_examples_with_independent_fixture (test_ecg_reference.PackageTests.test_full_dataset_counter_and_examples_with_independent_fixture) ... ok
+test_full_dataset_missing_is_not_500_distribution (test_ecg_reference.PackageTests.test_full_dataset_missing_is_not_500_distribution) ... ok
+test_generated_traces_match_fraction_oracle_bit_exact (test_ecg_reference.PackageTests.test_generated_traces_match_fraction_oracle_bit_exact) ... ok
+test_generated_vectors_float_error_budgets_and_classes (test_ecg_reference.PackageTests.test_generated_vectors_float_error_budgets_and_classes) ... ok
+test_proposed_rom_matches_rational_encoding (test_ecg_reference.PackageTests.test_proposed_rom_matches_rational_encoding) ... ok
+test_real_golden_rows_retain_csv_features_labels_and_patient_id (test_ecg_reference.PackageTests.test_real_golden_rows_retain_csv_features_labels_and_patient_id) ... ok
+test_restricted_checkpoint_rejects_arbitrary_globals (test_ecg_reference.PackageTests.test_restricted_checkpoint_rejects_arbitrary_globals) ... ok
+test_saved_windows_and_features_recompute (test_ecg_reference.PackageTests.test_saved_windows_and_features_recompute) ... ok
+
+----------------------------------------------------------------------
+Ran 37 tests in 15.490s
+
+OK

@@ -1,0 +1,23 @@
+# Simulation outputs
+build/
+*.vcd
+*.wlf
+*.vvp
+*.jou
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.phase1a_env/
+
+# FPGA generated outputs
+.Xilinx/
+*.runs/
+*.cache/
+*.sim/
+*.gen/
+*.hw/
+*.ip_user_files/
+*.bit
+*.dcp

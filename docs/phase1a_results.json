@@ -1,0 +1,294 @@
+{
+  "annotation_semantics": {
+    "reason": "No raw annotations or upstream dataset schema. Allowlist includes punctuation; clinical meaning not inferred.",
+    "status": "NOT RUN"
+  },
+  "candidate_constants": {
+    "clipped": 0,
+    "max_abs_error": 4.76837158203125e-07,
+    "status": "PASS",
+    "word_count": 164
+  },
+  "candidate_vs_float_on_generated_vectors": {
+    "acceptance_tolerances": {
+      "hidden": 0.002,
+      "logits": 0.01,
+      "normalized": 0.001,
+      "pre_activation": 0.002
+    },
+    "class_mismatch_indices": [],
+    "clinical_or_dataset_accuracy": "NOT RUN",
+    "max_absolute_errors": {
+      "hidden": 4.704418695966606e-05,
+      "logits": 0.00010032075326904533,
+      "normalized": 3.659586145887683e-05,
+      "pre_activation": 4.704418695966606e-05
+    },
+    "minimum_float_logit_margin": 0.21298509253446518,
+    "overflow_errors": [],
+    "processed": 14,
+    "status": "PASS",
+    "vectors": 14
+  },
+  "candidate_vs_float_on_legacy_decode_hypothesis": {
+    "acceptance_tolerances": {
+      "hidden": 0.002,
+      "logits": 0.01,
+      "normalized": 0.001,
+      "pre_activation": 0.002
+    },
+    "class_mismatch_indices": [],
+    "clinical_or_dataset_accuracy": "NOT RUN",
+    "max_absolute_errors": {
+      "hidden": 2.351871470018807e-05,
+      "logits": 6.574806046799608e-05,
+      "normalized": 1.8889056954740635e-05,
+      "pre_activation": 2.351871470018807e-05
+    },
+    "minimum_float_logit_margin": 0.17137628945509054,
+    "overflow_errors": [],
+    "processed": 500,
+    "status": "PASS",
+    "vectors": 500
+  },
+  "checkpoint_layout": {
+    "method": "restricted metadata decoder and binary float storage; no torch import",
+    "shapes": {
+      "fc1.bias": [
+        8
+      ],
+      "fc1.weight": [
+        8,
+        12
+      ],
+      "fc2.bias": [
+        4
+      ],
+      "fc2.weight": [
+        4,
+        8
+      ]
+    },
+    "status": "PASS",
+    "storage_dtype": "IEEE754 float32 little endian"
+  },
+  "checkpoint_scaler_training_provenance": {
+    "reason": "train_2.py never calls torch.save; scaler is rewritten before loading pre-existing checkpoint. Same-run pairing cannot be established.",
+    "status": "FAIL"
+  },
+  "full_dataset": {
+    "all_four_classes": "PASS",
+    "class_counts": {
+      "0": 52422,
+      "1": 9353,
+      "2": 9353,
+      "3": 39076
+    },
+    "feature_max": [
+      4.768381595611572,
+      15.82455825805664,
+      5.553721904754639,
+      0.29394812680115273,
+      10.01904010772705,
+      9.277459144592285,
+      13.669700622558594,
+      5.553721904754639,
+      5.872222222222222,
+      5.872222222222222,
+      47.99999712000018,
+      5.1083333333333325
+    ],
+    "feature_min": [
+      0.04724138602614403,
+      0.0005963552393950522,
+      0.09687671065330505,
+      0.0,
+      0.1789959967136383,
+      1.075649380683899,
+      0.12457602471113205,
+      -3.0657308101654053,
+      0.016666666666666666,
+      0.016666666666666666,
+      0.01857585137248512,
+      -4.680555555555555
+    ],
+    "file_name": "AI_Training_12_Features_250Hz_V2.csv",
+    "patient_count": 48,
+    "patient_split_overlap": "NOT RUN: saved train/val/test membership unavailable",
+    "rows": 110204,
+    "sha256": "a82cf74a931d9e00a09617be156416ec269e2ff986dc681dacacf7509cde38b4",
+    "status": "PASS"
+  },
+  "generated_prediction_coverage": {
+    "float_classes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "kind": "synthetic coverage does not establish source-data class coverage",
+    "status": "PASS"
+  },
+  "legacy_500_population": {
+    "all_four_classes": "FAIL",
+    "encoding_provenance": "NOT RUN: signed Q4.12 raw-feature decoding is only a comparison hypothesis",
+    "label_counts": {
+      "0": 490,
+      "1": 0,
+      "2": 0,
+      "3": 10
+    },
+    "status": "PASS",
+    "vectors": 500,
+    "words": 6000
+  },
+  "legacy_no_clipping": {
+    "clipped_parameters": [
+      {
+        "address": 15,
+        "block": "inverse_scale",
+        "stored_signed": 32767,
+        "stored_value": 7.999755859375,
+        "unclamped_integer": 236631,
+        "unquantized": 57.77128774964532
+      }
+    ],
+    "status": "FAIL"
+  },
+  "legacy_parameters_vs_float_on_legacy_decode_hypothesis": {
+    "acceptance_tolerances": {
+      "hidden": 0.002,
+      "logits": 0.01,
+      "normalized": 0.001,
+      "pre_activation": 0.002
+    },
+    "class_mismatch_indices": [
+      257
+    ],
+    "clinical_or_dataset_accuracy": "NOT RUN",
+    "max_absolute_errors": {
+      "hidden": 0.8025448443653234,
+      "logits": 1.0165493381014556,
+      "normalized": 0.6466425401288283,
+      "pre_activation": 0.8025448443653234
+    },
+    "minimum_float_logit_margin": 0.17137628945509054,
+    "overflow_errors": [],
+    "processed": 500,
+    "status": "FAIL",
+    "vectors": 500
+  },
+  "legacy_rom_reproduction": {
+    "mismatch_addresses": [],
+    "status": "PASS",
+    "words": 164
+  },
+  "patient_disjoint_split": {
+    "reason": "Two stratified row-level train_test_split calls; patient_id not used. Actual overlap NOT RUN without dataset and split membership.",
+    "status": "FAIL"
+  },
+  "pytorch_numpy_scipy_runtime_parity": {
+    "reason": "Optional dependency tests report installed-runtime status separately.",
+    "status": "NOT RUN"
+  },
+  "rtl_hardware_parity": {
+    "reason": "Phase 1A changes no RTL. Experimental Q12.20 is not implemented in RTL.",
+    "status": "NOT RUN"
+  },
+  "source_contract": {
+    "arrhythmia_major": [
+      "V",
+      "F",
+      "L",
+      "R",
+      "E"
+    ],
+    "arrhythmia_minor": [
+      "A",
+      "a",
+      "J",
+      "S"
+    ],
+    "csv_order_verified": "PASS",
+    "declared_feature_order": [
+      "f_rms",
+      "f_var",
+      "f_peak",
+      "f_zc",
+      "f_ptp",
+      "f_crest",
+      "f_half_ratio",
+      "f_max",
+      "f_rr",
+      "f_rr_prev",
+      "f_rr_ratio",
+      "f_rr_diff"
+    ],
+    "return_feature_order": [
+      "f_rms",
+      "f_var",
+      "f_peak",
+      "f_zc",
+      "f_ptp",
+      "f_crest",
+      "f_half_ratio",
+      "f_max",
+      "f_rr",
+      "f_rr_prev",
+      "f_rr_ratio",
+      "f_rr_diff"
+    ],
+    "status": "PASS",
+    "torch_save_call_count": 0,
+    "train_and_export_linear_shapes": [
+      [
+        [
+          12,
+          8
+        ],
+        [
+          8,
+          4
+        ]
+      ],
+      [
+        [
+          12,
+          8
+        ],
+        [
+          8,
+          4
+        ]
+      ]
+    ],
+    "training_feature_selection": "[c for c in df.columns if c.startswith('f_')]",
+    "valid_symbols": [
+      "N",
+      "L",
+      "R",
+      "A",
+      "a",
+      "J",
+      "S",
+      "V",
+      "F",
+      "[",
+      "!",
+      "e",
+      "j",
+      "E",
+      "/",
+      "f",
+      "x",
+      "Q",
+      "|",
+      "]"
+    ]
+  },
+  "source_data_four_class_vectors": {
+    "count": 4,
+    "reason": "Source feature rows preserved with CSV line and patient ID; raw-window lineage still unavailable.",
+    "status": "PASS"
+  }
+}

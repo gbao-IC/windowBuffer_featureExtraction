@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "preexisting_files_checked": 70,
+  "changed_preexisting_files": [],
+  "repositories": {
+    "AI_FSM_ECG": {
+      "branch": "main",
+      "head": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+      "main": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+      "main_unchanged": "PASS",
+      "working_tree": [],
+      "remote": "https://github.com/gbao-IC/AI_FSM_ECG.git"
+    },
+    "windowBuffer_featureExtraction": {
+      "branch": "ECG",
+      "head": "983f803b3e3d815a411c46da7ae66006a9d5af03",
+      "main": "9e33a48dab0d5d517ac8adaf4000dca9f8342cda",
+      "main_unchanged": "PASS",
+      "working_tree": [
+        "?? docs/baseline_audit.md",
+        "?? docs/ecg_spec.md",
+        "?? docs/interface_contract.md",
+        "?? docs/model_manifest.json",
+        "?? docs/phase1a_dataset_results.json",
+        "?? docs/phase1a_report.md",
+        "?? docs/phase1a_results.json",
+        "?? docs/phase1a_tests.json",
+        "?? docs/phase1a_tests.log",
+        "?? tests/",
+        "?? tools/"
+      ],
+      "remote": "https://github.com/gbao-IC/windowBuffer_featureExtraction.git"
+    }
+  },
+  "dataset_sha256": "a82cf74a931d9e00a09617be156416ec269e2ff986dc681dacacf7509cde38b4",
+  "dataset_unchanged_since_audit": "PASS",
+  "scope": "Read-only comparison to beginning-of-Phase-1A snapshot. Preexisting Phase-0 documents included."
+}

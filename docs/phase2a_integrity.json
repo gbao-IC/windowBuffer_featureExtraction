@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "preexisting_files_checked": 84,
+  "changed_preexisting_files": [],
+  "repositories": {
+    "AI_FSM_ECG": {
+      "branch": "main",
+      "before": {
+        "HEAD": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+        "main": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d"
+      },
+      "after": {
+        "HEAD": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d",
+        "main": "7b9a4cc4f3d7ddb1c6e47b51ab8d8a979b69fe1d"
+      },
+      "refs_unchanged": "PASS",
+      "tracked_diff": "",
+      "working_tree": []
+    },
+    "windowBuffer_featureExtraction": {
+      "branch": "ECG",
+      "before": {
+        "HEAD": "983f803b3e3d815a411c46da7ae66006a9d5af03",
+        "main": "9e33a48dab0d5d517ac8adaf4000dca9f8342cda"
+      },
+      "after": {
+        "HEAD": "983f803b3e3d815a411c46da7ae66006a9d5af03",
+        "main": "9e33a48dab0d5d517ac8adaf4000dca9f8342cda"
+      },
+      "refs_unchanged": "PASS",
+      "tracked_diff": "",
+      "working_tree": [
+        "?? .gitignore",
+        "?? docs/baseline_audit.md",
+        "?? docs/ecg_spec.md",
+        "?? docs/interface_contract.md",
+        "?? docs/model_manifest.json",
+        "?? docs/phase1a_dataset_results.json",
+        "?? docs/phase1a_integrity.json",
+        "?? docs/phase1a_report.md",
+        "?? docs/phase1a_results.json",
+        "?? docs/phase1a_tests.json",
+        "?? docs/phase1a_tests.log",
+        "?? docs/phase2a_integrity.json",
+        "?? docs/phase2a_report.md",
+        "?? docs/phase2a_results.json",
+        "?? rtl/",
+        "?? tb/ecg/",
+        "?? tests/",
+        "?? tools/"
+      ]
+    }
+  }
+}

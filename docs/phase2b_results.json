@@ -1,0 +1,70 @@
+{
+  "part": "xc7z020clg484-1",
+  "period_ns": 20.0,
+  "mode": "out_of_context",
+  "requested_stage": "route",
+  "branch": "ECG",
+  "head": "983f803b3e3d815a411c46da7ae66006a9d5af03",
+  "build_directory": "build/phase2b/20261016_211244_096446",
+  "checks": [
+    {
+      "name": "source_model_preflight",
+      "status": "PASS",
+      "model_words": 164
+    },
+    {
+      "name": "vivado_part_check",
+      "status": "NOT RUN",
+      "reason": "Vivado executable unavailable; no software installed"
+    },
+    {
+      "name": "synthesis",
+      "status": "NOT RUN",
+      "reason": "Vivado executable unavailable; no software installed"
+    },
+    {
+      "name": "implementation",
+      "status": "NOT RUN",
+      "reason": "Vivado executable unavailable; no software installed"
+    },
+    {
+      "name": "bram_mapping",
+      "status": "NOT RUN",
+      "reason": "Vivado executable unavailable; no software installed"
+    },
+    {
+      "name": "rom_init_netlist_equivalence",
+      "status": "NOT RUN",
+      "reason": "Vivado executable unavailable; no software installed"
+    },
+    {
+      "name": "utilization",
+      "status": "NOT RUN",
+      "reason": "Vivado executable unavailable; no software installed"
+    },
+    {
+      "name": "setup_hold_timing",
+      "status": "NOT RUN",
+      "reason": "Vivado executable unavailable; no software installed"
+    }
+  ],
+  "resource_values": null,
+  "timing_values": {},
+  "hardware_signoff": "NOT RUN",
+  "source_sha256": {
+    "rtl/ecg/ecg_q12_20_pkg.sv": "e1a6a0d04b763976ae94855a73fc0ad37a5ff65ed6aa6d0ee38f3eed692348c0",
+    "rtl/ecg/ecg_model_rom.sv": "96247d52e405a502057b5ab5b7de6ef8d0f45518a196183488d58f4107d372c2",
+    "rtl/ecg/ecg_mlp_core.sv": "a5b3c87d71875e55647b2515b73407cdcbc71d98c59a6544b6015f25b54c2b43",
+    "tests/vectors/model_q12_20.hex": "44b77346ac8d1636c2ccd30e2dce936e993560bfb2d37d4aa4d4e6250a847f41",
+    "synthesis/ecg/ecg_mlp_ooc.xdc": "57cb2d080b19672d0f320c35fb55674555701619cc82ba13663643b181ed9f9b",
+    "synthesis/ecg/run_vivado.tcl": "8fbc760977db978810da25e4190218116923c858132be25d66d24615085e835e"
+  },
+  "runner_sha256": "24589b5b9b69632964a82b4b96e4b1b40566ccae970787c2f8b8b5df0f11c3b2",
+  "tool_discovery": {
+    "executable": null,
+    "candidates": [],
+    "explicit": null
+  },
+  "status": "NOT RUN",
+  "staged_sources_unchanged": true
+}
